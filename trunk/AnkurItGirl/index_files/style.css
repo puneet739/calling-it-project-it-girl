@@ -1,0 +1,117 @@
+/* CSS Document */
+
+body {
+	margin:0px;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#313131;
+	background-image: url(../images/main_bg1.gif);
+	background-repeat: no-repeat;
+#	background-attachment:fixed;
+	background-position:center;
+}
+
+#container {margin:0px auto; width:1000px;}
+.clear {clear:both;}
+
+#main_top_panel {clear:both;}
+
+
+#logo_panel {clear:both; margin:15px 0px 0px 0px; padding:0px; display:block; float:left; width:400px;}
+.logo {margin:0px; padding:0px; }
+.logo h1 {margin:0px; padding:10px 0px 0px 0px; font-size:26px; font-weight:normal;}
+.logo p {margin:0px; padding:0px 0px 0px 135px; font-size:11px;}
+
+#top_right_panel {float:right; margin:15px 0px 0px 0px; padding:0px; display:block; width:560px;}
+.nav {margin:0px; padding:0px;}
+.nav ul {margin:50px 0px 0px 0px; padding:0px;}
+.nav ul li{margin:0px; padding:0px; list-style:none; float:left; text-transform:uppercase; font-size:13px; font-weight:bold; border-left:2px solid #fd5ca0;}
+.nav ul li a{margin:0px; padding:0px 10px 0px 10px; text-decoration:none; color:#585858;}
+.nav ul li a:hover {text-decoration:underline; color:#fd5ca0;}
+.nav ul li a.current {color:#fd5ca0;}
+
+/*********************************************************************************************************/
+#main_middle_panel {clear:both;}
+#main_left_panel {margin:0px; padding:0px; float: left; width:500px;}
+.left {margin:100px 0px 0px 30px; padding:0px;}
+.box_top {float:left; background:url(../images/mid_box.png) repeat-y 0 0; width:464px;}
+.box_mid {float:left; background:url(../images/top_box.png) no-repeat 0 0; width:464px;}
+.box_bottom {float:left; background:url(../images/bottom_box.png) no-repeat 0 bottom ; width:464px;} 
+.content_panel {margin:20px 30px 0px 30px; padding:0px;}
+ h1 {margin:0px; padding:0px 0px 5px 0px; font-size:26px; font-weight:normal; color:#fbab18; border-bottom:1px solid #CCCCCC;}
+.content_panel h1 span {color:#1f9cbd;}
+.content_panel h4 {margin:0px; padding:10px 0px 0px 0px; font-size:14px; font-weight: bold; color:#fbab18; }
+.content_panel p {margin:0px; padding:0px; line-height:24px; font-weight:bold;}
+
+.left_sec_panel {margin:40px 0px 40px 30px; padding:0px;}
+.box_top {float:left; background:url(../images/mid_box.png) repeat-y 0 0; width:464px;}
+.box_mid {float:left; background:url(../images/top_box.png) no-repeat 0 0; width:464px;}
+.box_bottom {float:left; background:url(../images/bottom_box.png) no-repeat 0 bottom ; width:464px;} 
+.content_panel h2 {margin:0px; padding:0px 0px 5px 10px; font-size:26px; font-weight:normal; color:#fbab18;  }
+.content_panel h2 span {color:#fd5ca0;}
+
+/*************************************************************************************/
+#main_right_panel {margin:0px; padding:0px; float: right ; width:490px;}
+
+.right_content_panel {margin:80px 0px 0px 0px; padding:0px; display:block; width:300px; float:right; }
+.right_content_panel h3 {margin:0px; padding:0px 40px 0px 40px; font-size:34px; font-weight:normal; color:#faa000; }
+.right_content_panel p {margin:0px; padding:10px 0px 0px 40px; font-size:19px; font-weight:normal; color:#fd5ca0; line-height:24px;}
+
+.right {margin:100px 0px 0px 2px; padding:0px; clear:both;}
+.box_top {float:left; background:url(../images/mid_box.png) repeat-y 0 0; width:464px;}
+.box_mid {float:left; background:url(../images/top_box.png) no-repeat 0 0; width:464px;}
+.box_bottom {float:left; background:url(../images/bottom_box.png) no-repeat 0 bottom ; width:464px;} 
+.content_panel_right {margin:20px 30px 0px 30px; padding:0px;}
+.content_panel_right p {margin:0px; padding:0px 0px 0px 0px; line-height:24px; font-weight:bold;}
+.content_panel_right h4 {margin:0px; padding:20px 0px 0px 0px; font-size:14px; font-weight: bold; color:#ff7e00; }
+.content_panel_right h5 {margin:0px; padding:0px 0px 5px 0px; font-size:26px; font-weight:normal; color:#fbab18; border-bottom:1px #CCCCCC solid;  }
+.content_panel_right h5 span {color:#fd5ca0;}
+
+
+
+.right_sec {margin:30px 0px 2px 0px; padding:0px; clear:both;}
+.box_top {float:left; background:url(../images/mid_box.png) repeat-y 0 0; width:464px;}
+.box_mid {float:left; background:url(../images/top_box.png) no-repeat 0 0; width:464px;}
+.box_bottom {float:left; background:url(../images/bottom_box.png) no-repeat 0 bottom ; width:464px;} 
+.content_panel_right_sec {margin:20px 40px 0px 40px; padding:0px;}
+.content_panel_right_sec h5 {margin:0px; padding:0px 0px 5px 0px; font-size:26px; font-weight:normal; color:#fbab18; border-bottom:1px #CCCCCC solid; }
+.content_panel_right_sec h5 span {color:#fd5ca0;}
+.content_panel_right_sec ul {margin:20px 0px 0px 0px; padding:0px; display:block; float:left; width:190px;}
+.content_panel_right_sec ul li{margin:0px; padding:0px; list-style: none; line-height:24px; font-size:11px;}
+.content_panel_right_sec ul li a{margin:0px; padding:0px 0px 0px 10px; background:url(../images/dot.gif) no-repeat; color:#0093c7}.content_panel_right_sec ul li a:hover {text-decoration:none;}
+
+
+
+
+
+
+a{ color:#6383AB; text-decoration:underline}
+a:hover{text-decoration:none}
+.clear{ clear:both}
+
+/* inner pages css start */
+/*h2{font:30px "Times New Roman", Times, serif ;margin:0px; color:#fff;  padding:15px 0px 10px 10px;}
+h2 span{color:#16eb00}*/
+
+h5{font:15px Tahoma, Arial, Helvetica, sans-serif; color:#656565; font-weight:bold; padding:0px 0px 5px 0px; border-bottom:1px dotted #999; margin:0px 0px 10px 0px;}
+h6{font:18px Tahoma, Arial, Helvetica, sans-serif; color:#656565; font-weight:bold; padding:0px 0px 5px 0px; margin:0px 0px 10px 0px;}
+
+.aboutus-img{float:right; border:4px solid #999; margin:0 0px 10px 20px;}
+.aboutcolumnzone{padding:20px 0px 16px 0px;}
+.aboutcolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.aboutcolumn2{width:48%; float:right; margin:0px 0px 10px 0px;}
+.abouticon{float:left; margin:0px 20px 0px 0px;}
+.insidereadmore{padding:10px 0px 10px 0px;}
+input.button{color:#fff; background:#333; font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #999;}
+input.button:hover{cursor:pointer; color:#fff; background:#999}
+.project-img{float:right; margin-left:20px;	border: 6px solid #999}
+.whiteheading{font:30px Myriad Pro, Arial; color:#CBD76B; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
+.ourprojectrow{margin-bottom:20px; border-bottom:1px dotted #999; padding-bottom:10px; padding-right:20px}
+.servicecolumnzone{padding:20px 0px 16px 0px;}
+.servicecolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.servicecolumn2{width:48%; float:right;	margin:0px 0px 10px 0px;}
+.blog-posted-row{padding:3px;}
+/* inner pages css ends */
+																						
+	
+				
+

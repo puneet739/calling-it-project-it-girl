@@ -4,3 +4,55 @@ This file will contain the details of what Progress we are following..
 2) With Hibernate as the DataBase Persisten Layer.
 3) Not able to find with FrontEnd i will be using. Will decide in sometime and update the page
 
+
+
+
+
+
+=============================================================================================================
+I will log all the changes i will doing..
+
+I have created a servlet Handler in web.xml
+
+    	<!-- Handles all requests into the application -->
+    <servlet>
+        <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                /WEB-INF/Puneet-Dispatcher-Servlet.xml
+            </param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+Here.. i have defined that any request starting with / will land on my "Spring MVC Dispatcher Servlet" and on upper hand i have defined 
+The servlet with this name is Servlet of DispatcherServlet Class... Via contextConfigLocation i have defined that path of the servlet
+/WEB-INF/Puneet-Dispatcher-Servlet.xml
+
+
+=============================================================================================================
+In Puneet-Dispatcher-Servlet.xml
+
+I have added 2 lines
+
+	<!-- Forwards requests to the "/" resource to the "welcome" view -->
+	<mvc:view-controller path="/" view-name="index.jsp"/>
+        <mvc:view-controller path="/puneet" view-name="index.html"/>
+
+This is to make sure that the server hits this page when you enter the URL.
+
+Also Added
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources/ directory -->
+	<mvc:resources mapping="/images/**" location="/WEB-INF/Resources/images/" />
+        <mvc:resources mapping="/index_files/**" location="/WEB-INF/Resources/index_files/" />
+
+This is to make sure that the All the static resource is available on the desired path.
+
+================================================================================================================

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<stories>
+
+<Story>
+       <id>1</id>
+	   <title>This is the Title</title>
+	   <file>Stories/fairytale.txt</file>
+</Story>
+
+<Story>
+       <id>2</id>
+	   <title>This is the Title2</title>
+	   <file>Stories/fairytale.txt</file>
+</Story>
+
+<Story>
+       <id>3</id>
+	   <title>This is the Title3</title>
+	   <file>Stories/fairytale.txt</file>
+</Story>
+
+</stories>
+

@@ -15,6 +15,8 @@ import com.stories.marutti.indianstories.entity.Story;
  */
 public interface storyfetching {
 
-	public List<Story> getStoriesbyCategory(String Category);
+	public String getStoriesbyStoryID(Integer storyId);
+	
+	public String getStoriesbyStoryID(Story story);
 		
 }

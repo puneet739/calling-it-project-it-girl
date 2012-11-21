@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.net.URL;
 import java.util.List;
 
+import com.stories.marutti.indianstories.details.Log;
+
 import android.os.Parcelable;
 
 
@@ -16,6 +18,8 @@ import android.os.Parcelable;
 public class Story implements Serializable{
 	
 	URL mStoryURL;
+	Integer mStoryID;
+	String mPath;
 	String mTitle;
 	String mStory ="Strory Missing";
 	String mImageUrl;
@@ -26,6 +30,14 @@ public class Story implements Serializable{
 		this.mTitle = title;
 	}
 
+	public Integer getStoryID() {
+		return mStoryID;
+	}
+
+	public void setStoryID(Integer mStoryID) {
+		this.mStoryID = mStoryID;
+	}
+	
 	public URL getStoryURL() {
 		return mStoryURL;
 	}
@@ -74,13 +86,30 @@ public class Story implements Serializable{
 		this.mCategories = mCategories;
 	}
 
-	@Override
-	public String toString() {
-		String story = "Title:"+mTitle;
-		return story;
+	public String getPath() {
+		return mPath;
+	}
+
+	public void setPath(String mPath) {
+		this.mPath = mPath;
 	}
 	
-	
+	@Override
+	public String toString() {
+		String story = "Story [StoryID "+mStoryID+", Title: "+mTitle+", Path: "+mPath+"]";
+		return story;
+	}
+
+	public void setStoryID(String iD) {
+		try {
+				Integer storyId = Integer.parseInt(iD);
+				setStoryID(storyId);
+		}catch(NumberFormatException e){
+			Log.err("Number Parsing Exception. ");
+			e.printStackTrace();
+		}
+		
+	}	
 	
 }
 

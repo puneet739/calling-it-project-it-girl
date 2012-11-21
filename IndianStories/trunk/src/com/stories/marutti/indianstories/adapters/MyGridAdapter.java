@@ -1,10 +1,12 @@
 package com.stories.marutti.indianstories.adapters;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +26,7 @@ import com.stories.marutti.indianstories.details.Log;
 import com.stories.marutti.indianstories.entity.Categories;
 import com.stories.marutti.indianstories.helper.CategoryHelper;
 import com.stories.marutti.indianstories.helper.DummyData;
+import com.stories.marutti.indianstories.helper.Util;
 import com.stories.marutti.indianstories.interfaces.CategoryFetching;
 
 public class MyGridAdapter extends BaseAdapter implements OnItemClickListener {
@@ -41,7 +44,6 @@ public class MyGridAdapter extends BaseAdapter implements OnItemClickListener {
 		mInflater = (LayoutInflater) mContext
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		loadCategories();
-
 	}
 
 	@Override
@@ -76,14 +78,15 @@ public class MyGridAdapter extends BaseAdapter implements OnItemClickListener {
 
 	public void loadmoreCategories() {
 		CategoryFetching categoryDetails = new CategoryHelper();
-		categoryDetails.loadCategories();
+		categoryDetails.loadCategories(null);
 		//DummyData.getInstance().loadExtraCategories(categoryList);
 		notifyDataSetChanged();
 	}
 
 	public void loadCategories() {
 		CategoryFetching categoryDetails = new CategoryHelper();
-		categoryList = categoryDetails.loadCategories();
+		InputStream categoryXml = Util.getInstance().getFile(Constants.FILES.CATEGORY_FILES, mContext.getAssets());
+		categoryList = categoryDetails.loadCategories(categoryXml);
 		//categoryList = DummyData.getInstance().loadCategories();
 	}
 
@@ -93,8 +96,8 @@ public class MyGridAdapter extends BaseAdapter implements OnItemClickListener {
 	 */
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,	long id) {
-		Log.msg("Item is clicked.. " + position);
-		Log.msg("The Category selected is " + categoryList.get(position));
+		Log.dbg("Item is clicked.. " + position);
+		Log.dbg("The Category selected is " + categoryList.get(position));
 		Categories currentCategory = (Categories) getItem(position);
 		Intent intent = new Intent(mContext, StorySelectorActivity.class);
 		

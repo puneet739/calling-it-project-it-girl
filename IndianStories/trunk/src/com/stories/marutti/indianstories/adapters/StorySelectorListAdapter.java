@@ -64,7 +64,7 @@ public class StorySelectorListAdapter extends BaseAdapter implements OnItemClick
 	public void onItemClick(AdapterView<?> parent, View view, int position,	long id) {
 		
 		Story story = getItem(position);
-		Log.msg("Current Story Selected is :"+story);
+		Log.dbg("Current Story Selected is :"+story);
 		Intent intent = new Intent(mContext,StoryRedingActivity.class);
 		
 		Bundle map = new Bundle();

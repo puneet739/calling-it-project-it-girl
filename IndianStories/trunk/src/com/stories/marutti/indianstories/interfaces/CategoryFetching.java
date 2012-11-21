@@ -5,6 +5,7 @@
  */
 package com.stories.marutti.indianstories.interfaces;
 
+import java.io.InputStream;
 import java.util.List;
 
 import com.stories.marutti.indianstories.entity.Categories;
@@ -16,9 +17,10 @@ import com.stories.marutti.indianstories.entity.Story;
  */
 public interface CategoryFetching {
 
-	public List<Categories> loadCategories(); 
+	public List<Categories> loadCategories(InputStream stream); 
 	
-	public List<Story> getStoriesbyCategory(String Category) ;
+	public List<Story> getStoriesbyCategory(String Category, InputStream stream) ;
 	
+	public List<Story> getStoriesbyCategory(Categories category) ;
 		
 }

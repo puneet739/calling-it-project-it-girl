@@ -19,5 +19,11 @@
 	   <file>Stories/fairytale.txt</file>
 </story>
 
+<story>
+           <id>4</id>
+           <title>The Leap Frog</title>
+           <file>Stories/theleapfrog.txt</file>
+</story>
+
 </stories>
 

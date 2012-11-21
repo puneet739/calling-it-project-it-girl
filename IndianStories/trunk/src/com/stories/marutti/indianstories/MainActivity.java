@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 
 import com.stories.marutti.indianstories.adapters.MyGridAdapter;
+import com.stories.marutti.indianstories.details.Log;
 import com.stories.marutti.indianstories.listeners.EndlessScrollListener;
 
 public class MainActivity extends Activity {
@@ -23,6 +24,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.categorylayout);
 		initializeValues();
 		gridview.setAdapter(madapter);
+		Log.dbg("Calling On create From this function.");
 	}
 
 	@Override

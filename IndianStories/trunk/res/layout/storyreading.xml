@@ -16,10 +16,15 @@
         android:text="@string/defaulttitle"
         android:textSize="@dimen/titlefont" />
 
-    <TextView
-        android:id="@+id/completestory"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="@string/defaultstory" />
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/completestory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/defaultstory" />
+    </ScrollView>
 
 </LinearLayout>

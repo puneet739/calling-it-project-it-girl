@@ -10,7 +10,10 @@ public class Log {
 	 * Level of Logging:
 	 * DEBUG = 3;
 	 * INFO = 4;
+	 * WARN = 5;
 	 * ERROR = 6;
+	 * 
+	 * @see android.util.Log
 	 */
 	private static String className;
 	private static final String log_tag = "com.stories.marutti.indianstories.details";
@@ -33,4 +36,9 @@ public class Log {
 		set_classname();
 	    android.util.Log.d(log_tag, "********** "+className + ": " + msg);
 	}
+	public static void wrn(String msg) {
+		set_classname();
+	    android.util.Log.w(log_tag, "********** "+className + ": " + msg);
+	}
+	
 }

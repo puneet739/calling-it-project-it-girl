@@ -5,6 +5,7 @@
  */
 package com.stories.marutti.indianstories.helper;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,10 @@ import com.stories.marutti.indianstories.details.Constants;
 import com.stories.marutti.indianstories.details.Log;
 import com.stories.marutti.indianstories.entity.Story;
 
-import android.util.SparseArray;
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 /**
  * @author puneetb
@@ -30,8 +34,10 @@ public class Config {
 	InputStream storyStream; 
 	Boolean loaded = false;
 	
+	private Context mContext;
+	private AssetManager mAssetManager;
+	private Bitmap mDefaultImage;
 	
-
 	private Config() {
 	}
 
@@ -52,7 +58,6 @@ public class Config {
 
 	
 	private void StoryKeyMapGenerator(Document doc) {
-		String categoryName;
 		mStoryMap = new HashMap<Integer, Story>();
 
 		NodeList nodes = doc
@@ -103,6 +108,58 @@ public class Config {
 
 	public void setLoaded(Boolean loaded) {
 		this.loaded = loaded;
+	}
+
+	
+	public Context getContext() {
+		return mContext;
+	}
+
+	private void setContext(Context mContext) {
+		this.mContext = mContext;
+	}
+
+	public AssetManager getAssetManager() {
+		return mAssetManager;
+	}
+
+	private void setAssetManager(AssetManager mAssetManager) {
+		this.mAssetManager = mAssetManager;
+	}
+
+	/**
+	 * This fucntion is iniliazed at the start of the APP,
+	 * Then the context and AssetManager of the app is stored here. 
+	 * This should not  be changed from anywhere else. 
+	 *  
+	 * @param context 	The application context.
+	 */
+	public void Inilialize(Context context) {
+		try{
+		this.mContext = context;
+		this.mAssetManager = context.getAssets();
+		setDefaultImage(Constants.FILES.DEFAULT_IMAGE_PATH);
+		Log.dbg("Application Context and AssetManager taken into cache Memory");
+		Log.dbg("This need to be called only Once. ");
+		}catch(Exception e){
+			Log.err("Excetption casused while caching the iniliazize");
+			e.printStackTrace();
+		}
+	}
+	
+	public Bitmap getDefaultImage() {
+		return mDefaultImage;
+	}
+
+	private void setDefaultImage(String DefaultImagePath) {
+		InputStream is = null;
+		try {
+			is = Config.getInstance().getAssetManager().open(DefaultImagePath);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		mDefaultImage = BitmapFactory.decodeStream(is);
 	}
 	
 }

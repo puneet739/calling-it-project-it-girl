@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Reference WebSites
+http://www.humandigest.com/blog/
+-->
+<categories>
+    <category>
+        <name>Bhabhi</name>
+        <stories>            
+            <storyid>101</storyid>
+            <storyid>102</storyid>
+            <storyid>103</storyid>
+            <storyid>104</storyid>
+            <storyid>105</storyid>
+            <storyid>106</storyid>
+        </stories>
+    </category>
+    
+    <category>
+        <name>Teacher/Student</name>
+        <imagepath>Images/categories/2.jpg</imagepath>
+        <stories>
+            <storyid>201</storyid>
+            <storyid>202</storyid>
+            <storyid>203</storyid>
+            <storyid>204</storyid>
+            <storyid>205</storyid>
+            <storyid>206</storyid>
+        </stories>
+    </category>
+
+	<!-- 
+		Rest of the categories are kept on hold
+		Will work on them at later stage, as of now they contain dummy data
+	-->
+    <category>
+        <name>GroupSex</name>
+        <stories>
+            <storyid>1</storyid>
+            <storyid>4</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Incest</name>
+        <stories>
+            <storyid>1</storyid>
+            <storyid>4</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Lesbian</name>
+        <stories>
+            <storyid>1</storyid>
+            <storyid>4</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Mom</name>
+        <stories>
+            <storyid>1</storyid>
+            <storyid>4</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Neighbours</name>
+        <stories>
+            <storyid>1</storyid>
+            <storyid>4</storyid>
+        </stories>
+    </category>
+    
+    <category>
+        <name>Stranger</name>
+        <stories>
+            <storyid>1</storyid>
+            <storyid>4</storyid>
+        </stories>
+    </category>        
+
+</categories>
+

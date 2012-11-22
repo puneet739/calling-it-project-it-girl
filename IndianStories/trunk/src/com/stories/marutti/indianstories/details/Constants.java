@@ -13,6 +13,7 @@ public class Constants {
 		public static final String CATEGORIES="categories";
 		public static final String CATEGORY="category";
 		public static final String NAME="name";
+		public static final String IMAGEPATH="imagepath";
 		public static final String STORIES="stories";
 		public static final String STORYID="storyid";
 	}
@@ -25,8 +26,9 @@ public class Constants {
 	}
 	
 	public class FILES{
-		public static final String CATEGORY_FILES="XML/categoriesstories.xml";
-		public static final String STORY_MAP="XML/baseStructure.xml";
+		public static final String CATEGORY_FILES="XML/categories.xml";
+		public static final String STORY_MAP="XML/allstories.xml";
+		public static final String DEFAULT_IMAGE_PATH = "Images/categories/defaultcategoryimage.jpg";
 	}
 	
 }

@@ -61,11 +61,12 @@ public class DummyData implements CategoryFetching, storyfetching{
 		return mStories;
 	}
 
-	public Bitmap getrandomImage(Context mContext) {
+	public Bitmap getdefaultImage() {
 		Bitmap draw = null;
 		InputStream is = null;
 		try {
-			is = mContext.getResources().getAssets().open("Images/categories/3.jpg");
+			//Config.getInstance().getmAssetManager();
+			is = Config.getInstance().getAssetManager().open("Images/categories/defaultcategoryimage.jpg");
 			
 		} catch (IOException e) {
 			e.printStackTrace();

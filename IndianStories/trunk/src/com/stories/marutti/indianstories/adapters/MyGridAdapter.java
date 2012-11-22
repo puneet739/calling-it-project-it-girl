@@ -52,7 +52,7 @@ public class MyGridAdapter extends BaseAdapter implements OnItemClickListener {
 	}
 
 	@Override
-	public Object getItem(int position) {
+	public Categories getItem(int position) {
 		return categoryList.get(position);
 	}
 
@@ -64,15 +64,17 @@ public class MyGridAdapter extends BaseAdapter implements OnItemClickListener {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View viewBlock = convertView;
+		Categories currentCategory = getItem(position);
 		if (viewBlock == null) {
 			viewBlock = getInflater().inflate(R.layout.categoryview, null);
 		}
 		TextView text = (TextView) viewBlock.findViewById(R.id.categorytitle);
-		text.setText(categoryList.get(position).getTitle());
+		text.setText(currentCategory.getTitle());
 		
 		ImageView image = (ImageView) viewBlock.findViewById(R.id.categoryImage);
 		//image.setImageBitmap(bm)
-		image.setImageBitmap(DummyData.getInstance().getrandomImage(mContext));
+		//image.setImageBitmap(DummyData.getInstance().getrandomImage(mContext));
+		image.setImageBitmap(currentCategory.getImage());
 		return viewBlock;
 	}
 

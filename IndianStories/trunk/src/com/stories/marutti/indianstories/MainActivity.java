@@ -10,6 +10,7 @@ import android.widget.GridView;
 
 import com.stories.marutti.indianstories.adapters.MyGridAdapter;
 import com.stories.marutti.indianstories.details.Log;
+import com.stories.marutti.indianstories.helper.Config;
 import com.stories.marutti.indianstories.listeners.EndlessScrollListener;
 
 public class MainActivity extends Activity {
@@ -21,6 +22,7 @@ public class MainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Config.getInstance().Inilialize(getApplicationContext());
 		setContentView(R.layout.categorylayout);
 		initializeValues();
 		gridview.setAdapter(madapter);
@@ -40,7 +42,10 @@ public class MainActivity extends Activity {
 	private void initializeValues() {
 		gridview = (GridView) findViewById(R.id.mygridview);
 		mContext = getApplicationContext();
+		
+		//Adding the GridAdapter in the current View. 
 		madapter = new MyGridAdapter(mContext);
+		
 		EndlessScrollListener endlesslistnr = new EndlessScrollListener();
 		endlesslistnr.setAdapter(madapter);
 		

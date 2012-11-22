@@ -9,9 +9,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import android.R.integer;
-
 import com.stories.marutti.indianstories.details.Constants;
+import com.stories.marutti.indianstories.details.Log;
 import com.stories.marutti.indianstories.entity.Categories;
 import com.stories.marutti.indianstories.entity.Story;
 
@@ -24,7 +23,7 @@ public class CategoryHelper implements
 
 		Document documnet = XMLfunctions.XMLDocumentfromInputStream(stream);
 
-		XMLDataParser parser = new XMLDataParser();
+		//XMLDataParser parser = new XMLDataParser();
 		try {
 			categories = CategoryGenerator(documnet);
 
@@ -84,6 +83,11 @@ public class CategoryHelper implements
 			
 			Categories tempCategory = new Categories(name);
 
+			String imagepath = XMLfunctions.getValue(categoryElement,
+					Constants.XMLConstants.IMAGEPATH);
+			
+			tempCategory.setImage(imagepath);
+			
 			NodeList stories = categoryElement
 					.getElementsByTagName(Constants.XMLConstants.STORIES);
 
@@ -96,20 +100,20 @@ public class CategoryHelper implements
 						.getElementsByTagName(Constants.XMLConstants.STORYID);
 
 				for (int p = 0; p < storyid.getLength(); p++) {
-					Element storyElement = (Element) storyid.item(p);
+					//Element storyElement = (Element) storyid.item(p);
 
-					String storyID = XMLfunctions.getValue(storyElement,
-							Constants.XMLConstants.STORYID);
+					//String storyID = XMLfunctions.getValue(storyElement,
+					//		Constants.XMLConstants.STORYID);
 
-					String storyID2 = XMLfunctions.getValue(storiesElement,
-							Constants.XMLConstants.STORYID);
+					//String storyID2 = XMLfunctions.getValue(storiesElement,
+					//		Constants.XMLConstants.STORYID);
 					String StoryId = XMLfunctions.getElementValue(storyid.item(p));
 					tempCategory.addStory(StoryId);
-					System.out.println("StoryId in above Category is :: " + StoryId);
+					Log.dbg("StoryId in above Category is :: " + StoryId);
 				}
 			}
 			categoryList.add(tempCategory);
-			System.out.println("******************");
+			Log.dbg("******************");
 		}
 
 		return categoryList;

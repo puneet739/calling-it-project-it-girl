@@ -1,6 +1,7 @@
 package com.stories.marutti.indianstories;
 
 import android.app.Activity;
+import android.content.ClipData.Item;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 
 import com.stories.marutti.indianstories.adapters.MyGridAdapter;
+import com.stories.marutti.indianstories.adapters.ProgramInitialingValues;
 import com.stories.marutti.indianstories.details.Log;
 import com.stories.marutti.indianstories.helper.Config;
 import com.stories.marutti.indianstories.listeners.EndlessScrollListener;
@@ -22,10 +24,11 @@ public class MainActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Config.getInstance().Inilialize(getApplicationContext());
+		LoadBasicValues();
 		setContentView(R.layout.categorylayout);
 		initializeValues();
 		gridview.setAdapter(madapter);
+		
 		Log.dbg("Calling On create From this function.");
 	}
 
@@ -54,4 +57,8 @@ public class MainActivity extends Activity {
 		gridview.setOnScrollListener(endlesslistnr);
 	}
 
+	private void LoadBasicValues() {
+		ProgramInitialingValues aSync = new ProgramInitialingValues(getApplicationContext());
+		aSync.execute("Just Calling");
+	}
 }

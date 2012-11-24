@@ -15,7 +15,7 @@ import com.stories.marutti.indianstories.details.Log;
 import com.stories.marutti.indianstories.helper.Config;
 import com.stories.marutti.indianstories.listeners.EndlessScrollListener;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
 	GridView gridview;
 	BaseAdapter madapter;
@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 		initializeValues();
 		gridview.setAdapter(madapter);
 		
-		Log.dbg("Calling On create From this function.");
+		Log.dbg("Calling On create From MainActivity.");
 	}
 
 	@Override

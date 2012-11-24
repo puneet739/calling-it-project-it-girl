@@ -11,4 +11,7 @@
     <string name="defaulttitle">Default Title</string>
     <string name="defaultstory">Default Story</string>
     
+    <string name="menu_about_developer">About Developer</string>
+    <string name="about_developer_title">About Developer</string>
+    <string name="about_developer_text">All the Text which need to be displayed in about me page. </string>
 </resources>

@@ -23,7 +23,7 @@ import android.widget.TextView;
  * This class is used to display the Stories we have with us. 
  * 
  */
-public class StoryRedingActivity extends Activity{
+public class StoryRedingActivity extends BaseActivity{
 
 	TextView mTitle,mcompleteStory;
 	Story mCurrentStory;
@@ -60,6 +60,7 @@ public class StoryRedingActivity extends Activity{
 	}
 
 	public void inilizaizeVariables() {
+		setTitle(R.string.app_name);
 		mTitle = (TextView) findViewById(R.id.storytitle);
 		mcompleteStory = (TextView) findViewById(R.id.completestory);
 	}

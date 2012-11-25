@@ -32,17 +32,12 @@ public class MainActivity extends BaseActivity {
 		Log.dbg("Calling On create From MainActivity.");
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
-
 	/**
 	 * @author puneetb This is used to initialize the variables and add all the
 	 *         listeneres to the Views.
 	 */
 	private void initializeValues() {
+		setTitle(R.string.app_name);
 		gridview = (GridView) findViewById(R.id.mygridview);
 		mContext = getApplicationContext();
 		

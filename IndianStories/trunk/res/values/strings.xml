@@ -13,5 +13,13 @@
     
     <string name="menu_about_developer">About Developer</string>
     <string name="about_developer_title">About Developer</string>
-    <string name="about_developer_text">All the Text which need to be displayed in about me page. </string>
+    <string name="about_developer_text">"DISCLAIMER This app contains stories and images published on third party sources. We are not
+ responsible for any or all of its content. This app is distributed as "as-is" without warranty of any kind and user may use at
+ his/her own risk. \n 
+This app user and third parties agree to indemnify and hold harmless this app's creator and its agent from any damages claimed 
+as a result of information, This app doesnt stream the content itslef, so the creator cant be held responsible for any 
+damage. \n
+If anybody still finds this app harmfull in any way, they must send a request to the creator first to remove the discrepancy. \n
+The developer can be reached out at puneet739@gmail.com"
+    </string>
 </resources>

@@ -1,5 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_aboutdeveloper"
+        android:icon="@drawable/ic_menu_about_me"
         android:title="@string/menu_about_developer"
         android:orderInCategory="100"
         android:showAsAction="never" />

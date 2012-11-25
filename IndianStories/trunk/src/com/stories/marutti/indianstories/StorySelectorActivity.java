@@ -54,6 +54,7 @@ public class StorySelectorActivity extends ListActivity {
 	}
 
 	public void iniliazlizeDetails() {
+		setTitle(R.string.app_name);
 		title = (TextView) findViewById(R.id.storycategorytitle);
 		title.setText(getCurrentCategory().getTitle());
 		loadCategoryList();

@@ -4,34 +4,29 @@ http://www.humandigest.com/blog/
 -->
 <categories>
     <category>
-        <name>Bhabhi</name>
-        <imagepath>Images/categories/bhabhi.jpg</imagepath>
+        <name>FairyTales</name>
+        <imagepath></imagepath>
         <stories>            
-            <storyid>101</storyid>
-            <storyid>102</storyid>
-            <storyid>103</storyid>
-            <storyid>104</storyid>
-            <storyid>105</storyid>
-            <storyid>106</storyid>
-            <storyid>107</storyid>
-            <storyid>108</storyid>
-            <storyid>1042</storyid>
-            <storyid>1044</storyid>
-            <storyid>1046</storyid>
+            <storyid>1001</storyid>
+            <storyid>1002</storyid>
+            <storyid>1003</storyid>
         </stories>
     </category>
     
     <category>
-        <name>Teacher/Student</name>
+        <name>Panchtantra Stories</name>
         <imagepath>Images/categories/teacher.jpg</imagepath>
         <stories>
-            <storyid>201</storyid>
-            <storyid>202</storyid>
-            <storyid>203</storyid>
-            <storyid>204</storyid>
-            <storyid>205</storyid>
-            <storyid>206</storyid>
-            <storyid>1045</storyid>
+            <storyid>1004</storyid>
+            <storyid>1005</storyid>
+            <storyid>1006</storyid>
+            <storyid>1007</storyid>
+            <storyid>1008</storyid>
+            <storyid>1009</storyid>
+            <storyid>1010</storyid>
+            <storyid>1011</storyid>
+            <storyid>1012</storyid>
+            <storyid>1013</storyid>
         </stories>
     </category>
 
@@ -40,80 +35,40 @@ http://www.humandigest.com/blog/
 		Will work on them at later stage, as of now they contain dummy data
 	-->
     <category>
-        <name>GroupSex</name>
+        <name>Aesop’s fables</name>
         <imagepath>Images/categories/groupsex.jpg</imagepath>
         <stories>
-            <storyid>1028</storyid>
-        </stories>
-    </category>
-
-    <category>
-        <name>Incest</name>
-        <imagepath>Images/categories/incest.jpg</imagepath>
-        <stories>
+            <storyid>1014</storyid>
             <storyid>1015</storyid>
             <storyid>1016</storyid>
+            <storyid>1017</storyid>
+            <storyid>1018</storyid>
             <storyid>1019</storyid>
-            <storyid>1024</storyid>
-            <storyid>1050</storyid>
-            <storyid>1085</storyid>
-            <storyid>1088</storyid>
+            <storyid>1020</storyid>
         </stories>
     </category>
 
     <category>
-        <name>Lesbian</name>
+        <name>Tenali Rama Stories</name>
+        <imagepath>Images/categories/incest.jpg</imagepath>
+        <stories>
+            <storyid>2001</storyid>
+            <storyid>2002</storyid>
+            <storyid>2003</storyid>
+            <storyid>2004</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Akbar Birbal Stories</name>
         <imagepath>Images/categories/lesbian.jpg</imagepath>
         <stories>
-            <storyid>1003</storyid>
-            <storyid>1020</storyid>
-            <storyid>1028</storyid>
-            <storyid>1029</storyid>
-            <storyid>1031</storyid>
-            <storyid>1036</storyid>
-            <storyid>1055</storyid>
+            <storyid>3001</storyid>
+            <storyid>3002</storyid>
+            <storyid>3003</storyid>
+            <storyid>3004</storyid>
         </stories>
     </category>
-
-    <category>
-        <name>Mom</name>
-        <imagepath>Images/categories/mom.jpg</imagepath>
-        <stories>
-            <storyid>1005</storyid>
-            <storyid>1007</storyid>
-            <storyid>1012</storyid>
-            <storyid>1013</storyid>
-            <storyid>1019</storyid>
-            <storyid>1036</storyid>
-            <storyid>1081</storyid>
-            <storyid>1024</storyid>
-            <storyid>1041</storyid>
-            <storyid>1067</storyid>
-        </stories>
-    </category>
-
-    <category>
-        <name>Neighbours</name>
-        <imagepath>Images/categories/neighbours.jpg</imagepath>
-        <stories>
-            <storyid>1018</storyid>
-            <storyid>1037</storyid>
-            <storyid>1001</storyid>
-            <storyid>1002</storyid>
-            <storyid>1002</storyid>
-            <storyid>1004</storyid>
-            <storyid>1081</storyid>
-        </stories>
-    </category>
-    
-    <category>
-        <name>Stranger</name>
-        <stories>
-            <storyid>1070</storyid>
-            <storyid>1071</storyid>
-            <storyid>1078</storyid>
-        </stories>
-    </category>        
 
 </categories>
 

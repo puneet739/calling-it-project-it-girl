@@ -5,7 +5,7 @@ http://www.humandigest.com/blog/
 <categories>
     <category>
         <name>FairyTales</name>
-        <imagepath></imagepath>
+        <imagepath>Images/categories/fairytales.jpg</imagepath>
         <stories>            
             <storyid>1001</storyid>
             <storyid>1002</storyid>
@@ -15,7 +15,7 @@ http://www.humandigest.com/blog/
     
     <category>
         <name>Panchtantra Stories</name>
-        <imagepath>Images/categories/teacher.jpg</imagepath>
+        <imagepath>Images/categories/pancha.jpg</imagepath>
         <stories>
             <storyid>1004</storyid>
             <storyid>1005</storyid>
@@ -36,7 +36,6 @@ http://www.humandigest.com/blog/
 	-->
     <category>
         <name>Aesop’s fables</name>
-        <imagepath>Images/categories/groupsex.jpg</imagepath>
         <stories>
             <storyid>1014</storyid>
             <storyid>1015</storyid>
@@ -50,7 +49,7 @@ http://www.humandigest.com/blog/
 
     <category>
         <name>Tenali Rama Stories</name>
-        <imagepath>Images/categories/incest.jpg</imagepath>
+        <imagepath>Images/categories/tenali.jpg</imagepath>
         <stories>
             <storyid>2001</storyid>
             <storyid>2002</storyid>
@@ -61,7 +60,7 @@ http://www.humandigest.com/blog/
 
     <category>
         <name>Akbar Birbal Stories</name>
-        <imagepath>Images/categories/lesbian.jpg</imagepath>
+        <imagepath>Images/categories/akbarbirbal.jpg</imagepath>
         <stories>
             <storyid>3001</storyid>
             <storyid>3002</storyid>

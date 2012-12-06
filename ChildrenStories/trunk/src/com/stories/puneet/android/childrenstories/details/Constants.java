@@ -31,4 +31,11 @@ public class Constants {
 		public static final String DEFAULT_IMAGE_PATH = "Images/categories/defaultcategoryimage.jpg";
 	}
 	
+	public class ADS{
+		public static final String ADMOB_ID="a150ba34f6d6b34";
+		public static final String LEADBOLT_PUSHNOTIFICATION="731025444";
+		public static final String LEADBOLT_APPWALL="956058664";
+		public static final String LEADBOLT_INTERSTITIAL="252727620";
+		//public static final String LEADBOLD_BANNER= <script type="text/javascript" src="http://ad.leadboltads.net/show_app_ad.js?section_id=688103208"></script>
+	}
 }

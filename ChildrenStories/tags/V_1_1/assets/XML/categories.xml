@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Reference WebSites
+http://www.humandigest.com/blog/
+-->
+<categories>
+    <category>
+        <name>FairyTales</name>
+        <imagepath>Images/categories/fairytales.jpg</imagepath>
+        <stories>            
+            <storyid>1001</storyid>
+            <storyid>1002</storyid>
+            <storyid>1003</storyid>
+        </stories>
+    </category>
+    
+    <category>
+        <name>Panchtantra Stories</name>
+        <imagepath>Images/categories/pancha.jpg</imagepath>
+        <stories>
+            <storyid>1004</storyid>
+            <storyid>1005</storyid>
+            <storyid>1006</storyid>
+            <storyid>1007</storyid>
+            <storyid>1008</storyid>
+            <storyid>1009</storyid>
+            <storyid>1010</storyid>
+            <storyid>1011</storyid>
+            <storyid>1012</storyid>
+            <storyid>1013</storyid>
+        </stories>
+    </category>
+
+	<!-- 
+		Rest of the categories are kept on hold
+		Will work on them at later stage, as of now they contain dummy data
+	-->
+    <category>
+        <name>Aesop’s fables</name>
+        <stories>
+            <storyid>1014</storyid>
+            <storyid>1015</storyid>
+            <storyid>1016</storyid>
+            <storyid>1017</storyid>
+            <storyid>1018</storyid>
+            <storyid>1019</storyid>
+            <storyid>1020</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Tenali Rama Stories</name>
+        <imagepath>Images/categories/tenali.jpg</imagepath>
+        <stories>
+            <storyid>2001</storyid>
+            <storyid>2002</storyid>
+            <storyid>2003</storyid>
+            <storyid>2004</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Akbar Birbal Stories</name>
+        <imagepath>Images/categories/akbarbirbal.jpg</imagepath>
+        <stories>
+            <storyid>3001</storyid>
+            <storyid>3002</storyid>
+            <storyid>3003</storyid>
+            <storyid>3004</storyid>
+        </stories>
+    </category>
+
+</categories>
+

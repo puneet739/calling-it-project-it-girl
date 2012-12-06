@@ -7,6 +7,7 @@ package com.stories.puneet.android.childrenstories;
 
 import java.io.InputStream;
 
+import com.stories.puneet.android.childrenstories.LeadBolt.LeadBoltAdd;
 import com.stories.puneet.android.childrenstories.details.Constants;
 import com.stories.puneet.android.childrenstories.details.Log;
 import com.stories.puneet.android.childrenstories.entity.Story;
@@ -60,6 +61,7 @@ public class StoryRedingActivity extends BaseActivity{
 	}
 
 	public void inilizaizeVariables() {
+		LeadBoltAdd.getInstance().showInterstitialAd(this);
 		setTitle(R.string.app_name);
 		mTitle = (TextView) findViewById(R.id.storytitle);
 		mcompleteStory = (TextView) findViewById(R.id.completestory);

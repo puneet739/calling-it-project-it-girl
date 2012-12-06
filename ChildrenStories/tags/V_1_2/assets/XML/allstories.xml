@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<stories>
+
+<story>
+           <id>1</id>
+	   <title>This is the Title</title>
+	   <file>Stories/fairytale.txt</file>
+</story>
+
+
+<!-- Fairy Tale Stories-->
+<story>
+           <id>1001</id>
+           <title>Beauty And The Beast</title>
+           <file>Stories/fairytails/beautryandbeast.txt</file>
+</story>
+
+<story>
+           <id>1002</id>
+           <title>The Sleeping Beauty</title>
+           <file>Stories/fairytails/sleepingbeauty.txt</file>
+</story>
+
+<story>
+           <id>1003</id>
+           <title>Cindrella</title>
+           <file>Stories/fairytails/cindrella.txt</file>
+</story>
+
+
+<story>
+           <id>1004</id>
+           <title>The Brahmin Dream</title>
+           <file>Stories/fairytails/brahmindream.txt</file>
+</story>
+
+<story>
+           <id>1005</id>
+           <title>The Three Friends</title>
+           <file>Stories/fairytails/threefriends.txt</file>
+</story>
+
+
+<story>
+           <id>1006</id>
+           <title>The Clever Merchant</title>
+           <file>Stories/fairytails/clevermerchant.txt</file>
+</story>
+
+
+<story>
+           <id>1007</id>
+           <title>The Brahmin And The Thieves</title>
+           <file>Stories/fairytails/brahminandthieves.txt</file>
+</story>
+
+<story>
+           <id>1008</id>
+           <title>Monkey And The Crocodile</title>
+           <file>Stories/fairytails/monkeyandcroc.txt</file>
+</story>
+
+<story>
+           <id>1009</id>
+           <title>The Rat And Elephant</title>
+           <file>Stories/fairytails/ratandelephant.txt</file>
+</story>
+
+<story>
+           <id>1010</id>
+           <title>The Snake And The Ant</title>
+           <file>Stories/fairytails/snakeandants.txt</file>
+</story>
+
+<story>
+           <id>1011</id>
+           <title>The Lion And The Fox</title>
+           <file>Stories/fairytails/lionandfox.txt</file>
+</story>
+
+<story>
+           <id>1012</id>
+           <title>The Clever Hare</title>
+           <file>Stories/fairytails/cleverhare.txt</file>
+</story>
+
+<story>
+           <id>1013</id>
+           <title>The Crow And Net</title>
+           <file>Stories/fairytails/crowandnet.txt</file>
+</story>
+
+
+<!--Aesof Stories -->
+<story>
+           <id>1014</id>
+           <title>The 2 Travelers and Bear</title>
+           <file>Stories/aesobsfables/2travelerandbear.txt</file>
+</story>
+
+<story>
+           <id>1015</id>
+           <title>The Tree and The Reed</title>
+           <file>Stories/aesobsfables/treeandreed.txt</file>
+</story>
+
+<story>
+           <id>1016</id>
+           <title>Young Man And His Mother</title>
+           <file>Stories/aesobsfables/youngmanandhismother.txt</file>
+</story>
+
+<story>
+           <id>1017</id>
+           <title>The Man And 2 Wives</title>
+           <file>Stories/aesobsfables/manand2wives.txt</file>
+</story>
+
+<story>
+           <id>1018</id>
+           <title>The Lion And The Mouse</title>
+           <file>Stories/aesobsfables/lionandmouse.txt</file>
+</story>
+
+<story>
+           <id>1019</id>
+           <title>The Fox And Stroke</title>
+           <file>Stories/aesobsfables/foxandstroke.txt</file>
+</story>
+
+<story>
+           <id>1020</id>
+           <title>The Fox And The Crow</title>
+           <file>Stories/aesobsfables/foxandcrow.txt</file>
+</story>
+
+
+<!-- TenaliRamaStories -->
+<story>
+           <id>2001</id>
+           <title>Tenali Rama And Cat</title>
+           <file>Stories/tenali/ramaandcat.txt</file>
+</story>
+
+<story>
+           <id>2002</id>
+           <title>Tenali Rama Teaches Greedy Priest</title>
+           <file>Stories/tenali/tenaliramateachespriest.txt</file>
+</story>
+
+<story>
+           <id>2003</id>
+           <title>Tenali Rama Hides</title>
+           <file>Stories/tenali/tenaliramaahides.txt</file>
+</story>
+
+<story>
+           <id>2004</id>
+           <title>Tenali Rama And The Magician</title>
+           <file>Stories/tenali/tenaliramaandmagician.txt</file>
+</story>
+
+
+<!-- Akbar Birbal Stories -->
+
+<story>
+           <id>3001</id>
+           <title>The Wise Birbal</title>
+           <file>Stories/akbarbirbal/wisebirbal.txt</file>
+</story>
+
+<story>
+           <id>3002</id>
+           <title>Tall Stick And Short Stick</title>
+           <file>Stories/akbarbirbal/sticks.txt</file>
+</story>
+
+<story>
+           <id>3003</id>
+           <title>2 Womens And A Baby</title>
+           <file>Stories/akbarbirbal/womenandbaby.txt</file>
+</story>
+
+<story>
+           <id>3004</id>
+           <title>Merchant And Stolen Treasure</title>
+           <file>Stories/akbarbirbal/merchantandstolentreasure.txt</file>
+</story>
+
+</stories>
+

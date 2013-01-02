@@ -1,0 +1,7 @@
+Changelog
+======================================================================
+Version 2.1
+	* Added new stories.
+
+Version 2.2
+	* New Ad integration

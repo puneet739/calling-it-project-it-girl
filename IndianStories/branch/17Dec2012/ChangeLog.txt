@@ -4,7 +4,22 @@ Version 2.1
 	* Added new stories.
 
 Version 2.2
-	 * Need to New  Ad integration
-	 * Make it a singleton. Means all ad in same manner
-	 * Add interstiial Ads
-	 * 
+	 * Make User to rate the app on closing it           **DONE**
+	 * Make it a singleton. Means all ad in same manner  **DONE**
+	 * Add New Feature:Youtube Integration Added		 **DONE**
+	 * Youtube Screen Rotate Issue						 **Only Horizontal Mode for now on**
+	 * Add new Stories
+	 * Need New Ad integration
+	 * Add interstial Ads
+	 * Add Shortcut Ad network  AP Icon
+	 * Ad Play when no youtube VideoProvided
+
+
+
+Version 2.3 
+		* New Changed here now.  First finish old changes
+		* Make this password protected
+		* Text Justify. 								**Kept for Next release, Not found As of now**
+		* YouTube New API Launched. Change to that. 
+	 	* Add FairDeal SplashScreen for 1 Sec at start
+	 	* AdWhirl Ads on YouTubeVideo

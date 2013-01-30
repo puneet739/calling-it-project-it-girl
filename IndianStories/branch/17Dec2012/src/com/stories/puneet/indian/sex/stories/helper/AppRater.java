@@ -18,8 +18,6 @@ import android.widget.TextView;
  * This is a helper class used to promt user to rate my app. 
  * This Will help the app to get some good rating and all.  
  * This is referenced from   http://www.androidsnippets.com/prompt-engaged-users-to-rate-your-app-in-the-android-market-appirater
- * 
- * 
  */
 public class AppRater {
     private final static String APP_TITLE = "PornSexStories";
@@ -64,7 +62,7 @@ public class AppRater {
         ll.setOrientation(LinearLayout.VERTICAL);
         
         TextView tv = new TextView(mContext);
-        tv.setText("If you enjoy using " + APP_TITLE + ", please take a moment to rate it. Thanks for your support!");
+        tv.setText("If you enjoy using " + APP_TITLE + ", please take a moment to rate it. Any suggestion will be highly appreciated. Thanks for your support!");
         tv.setWidth(240);
         tv.setPadding(4, 0, 4, 10);
         ll.addView(tv);

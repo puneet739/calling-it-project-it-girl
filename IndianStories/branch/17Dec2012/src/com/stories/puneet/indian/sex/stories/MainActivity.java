@@ -1,6 +1,7 @@
 package com.stories.puneet.indian.sex.stories;
 
 import android.app.ActionBar.LayoutParams;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.AdapterView.OnItemClickListener;
@@ -11,10 +12,13 @@ import android.widget.RelativeLayout;
 import com.adwhirl.AdWhirlLayout;
 import com.adwhirl.AdWhirlLayout.AdWhirlInterface;
 import com.adwhirl.AdWhirlManager;
+import com.pad.android.iappad.AdController;
 import com.stories.puneet.indian.sex.stories.adapters.MyGridAdapter;
 import com.stories.puneet.indian.sex.stories.adapters.ProgramInitialingValues;
+import com.stories.puneet.indian.sex.stories.details.Constants;
 import com.stories.puneet.indian.sex.stories.details.Log;
 import com.stories.puneet.indian.sex.stories.helper.AppRater;
+import com.stories.puneet.indian.sex.stories.helper.Config;
 import com.stories.puneet.indian.sex.stories.listeners.EndlessScrollListener;
 
 public class MainActivity extends BaseActivity implements AdWhirlInterface {
@@ -22,6 +26,7 @@ public class MainActivity extends BaseActivity implements AdWhirlInterface {
 	GridView gridview;
 	BaseAdapter madapter;
 	Context mContext;
+	AdController myController;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,8 @@ public class MainActivity extends BaseActivity implements AdWhirlInterface {
 	 * 
 	 * @param mContext the context of the current activity. 
 	 */
+	
+	/*
 	private void AdWhirlConfiguration(Context  mContext) {
 
 		AdWhirlManager.setConfigExpireTimeout(1000*60*5);
@@ -61,7 +68,7 @@ public class MainActivity extends BaseActivity implements AdWhirlInterface {
         layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
 		
-	}
+	}*/
 
 	/**
 	 * @author puneetb This is used to initialize the variables and add all the
@@ -81,6 +88,9 @@ public class MainActivity extends BaseActivity implements AdWhirlInterface {
 		//These listeners are added to our gridView. To make the system interactive.  
 		gridview.setOnItemClickListener((OnItemClickListener) madapter);
 		gridview.setOnScrollListener(endlesslistnr);
+		
+		//Adding LeadBolt ApIcon
+		Config.getInstance().AdLeadBolt(this, Constants.LEADBOLT.APP_ICON);
 	}
 
 	private void LoadBasicValues() {

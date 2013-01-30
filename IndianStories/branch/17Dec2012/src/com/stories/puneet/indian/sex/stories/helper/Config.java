@@ -14,11 +14,14 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import com.pad.android.iappad.AdController;
 import com.stories.puneet.indian.sex.stories.details.Constants;
 import com.stories.puneet.indian.sex.stories.details.Log;
 import com.stories.puneet.indian.sex.stories.entity.Story;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -74,13 +77,19 @@ public class Config {
 
 			String StoryPath = XMLfunctions.getValue(categoryElement,
 					Constants.XMLConstants_StoryMap.FILEPATH);
+			
+			String VideoId = XMLfunctions.getValue(categoryElement,
+					Constants.XMLConstants_StoryMap.VIDEOID);
 
 			Log.dbg("Story ID is :: " + ID);
 			Log.dbg("Story Tittle is :: " + StoryTitle);
 			Log.dbg("Story Path is :: " + StoryPath);
+			Log.dbg("Story Path is :: " + VideoId);
+			
 			Story tempStory = new Story(StoryTitle);
 			tempStory.setPath(StoryPath);
 			tempStory.setStoryID(ID);
+			tempStory.setExtraParam(Constants.STORY_YOUTUBE_ID, VideoId);
 			
 			mStoryMap.put(tempStory.getStoryID(), tempStory);
 			
@@ -160,6 +169,24 @@ public class Config {
 			e.printStackTrace();
 		}
 		mDefaultImage = BitmapFactory.decodeStream(is);
+	}
+	
+	public void AdLeadBoltConfigured(Activity avt, String type, long interval) {
+		SharedPreferences prefs = mContext.getSharedPreferences("com.stories.puneet.indian.sex.stories.LeadBoltAd", 0);
+		SharedPreferences.Editor editor = prefs.edit();
+		long launch_count = prefs.getLong(type, 0) + 1;
+		editor.putLong(type, launch_count);
+		if (launch_count > interval){
+			launch_count=0;
+			AdLeadBolt(avt, type);
+		}
+		editor.commit();
+		
+	}
+	
+	public void AdLeadBolt(Activity avt, String type) {
+		AdController myController  = new AdController(avt,type);
+        myController.loadAd();
 	}
 	
 }

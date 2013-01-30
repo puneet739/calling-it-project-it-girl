@@ -85,6 +85,8 @@ public class Categories implements Serializable{
 			
 		} catch (FileNotFoundException e) {
 			Log.wrn("Image for Category is not defined/Found in the system. Will use default Image. "+e.getLocalizedMessage());
+		}catch (NullPointerException e) {
+				Log.wrn("Image is not definded in the XML. So it will set the default Image again. "+e.getLocalizedMessage());
 		} catch(Exception e){
 			Log.err("Some Different Exception occured. "+e.getLocalizedMessage());
 			e.printStackTrace();

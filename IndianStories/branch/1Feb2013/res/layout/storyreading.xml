@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/admoblayout" />
+
+    <TextView
+        android:id="@+id/storytitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/shadowColor"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="@string/defaulttitle"
+        android:textSize="@dimen/titlefont" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_weight="1"
+			>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                >
+
+                <TextView
+                    android:id="@+id/completestory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|right"
+                    android:text="@string/defaultstory" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/youtubebutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="YouTubeVideoPlay"
+            android:text="BonusVideo" />
+
+</LinearLayout>

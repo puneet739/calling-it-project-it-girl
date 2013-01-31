@@ -71,7 +71,7 @@ public class StoryRedingActivity extends BaseActivity{
 		setTitle(R.string.app_name);
 		mTitle = (TextView) findViewById(R.id.storytitle);
 		mcompleteStory = (TextView) findViewById(R.id.completestory);
-		Config.getInstance().AdLeadBoltConfigured(this, Constants.LEADBOLT.INTERSTIAL_CHROME,8);
+		Config.getInstance().AdLeadBoltConfigured(this, Constants.LEADBOLT.INTERSTIAL_CHROME,Constants.LEADBOLT.INTERSTIAL_DELAY);
 	}
 
 	

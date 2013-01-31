@@ -23,10 +23,10 @@ import android.widget.Toast;
 public class YouTubeActivity{
 	
 	public static void LaunchYouTube(Context context, String VideoId){
+		Config.getInstance().AdLeadBoltConfigured((Activity)context, Constants.LEADBOLT.APPWALL,Constants.LEADBOLT.APPWALL_DELAY);
 		if (VideoId==null){
 			Log.err("Video ID is null, Not running the YouTubePlayer");
 			Toast.makeText(Config.getInstance().getContext(), "Video Not specified with this Story", Toast.LENGTH_LONG).show();
-			Config.getInstance().AdLeadBoltConfigured((Activity)context, Constants.LEADBOLT.APPWALL,10);
 			return;
 		}
 		Intent lVideoIntent = new Intent(null, Uri.parse("ytv://"+VideoId), context, OpenYouTubePlayerActivity.class);

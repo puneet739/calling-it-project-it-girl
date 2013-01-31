@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Reference WebSites
+http://www.humandigest.com/blog/
+-->
+<categories>
+    <category>
+        <name>Bhabhi</name>
+        <imagepath>Images/categories/bhabhi.jpg</imagepath>
+        <stories>
+        		<storyid>401</storyid>
+        		<storyid>402</storyid>            
+            <storyid>101</storyid>
+            <storyid>201</storyid>
+            <storyid>202</storyid>
+            <storyid>203</storyid>
+            <storyid>204</storyid>
+            <storyid>205</storyid>
+            <storyid>206</storyid>
+            
+        </stories>
+    </category>
+    
+    <!--
+    <category>
+        <name>Teacher/Student</name>
+        <imagepath>Images/categories/teacher.jpg</imagepath>
+        <stories>
+            <storyid>201</storyid>
+            <storyid>201</storyid>
+            <storyid>202</storyid>
+            <storyid>203</storyid>
+            <storyid>204</storyid>
+            <storyid>205</storyid>
+            <storyid>206</storyid>
+        </stories>
+    </category>
+    -->
+
+	<!-- 
+		Rest of the categories are kept on hold
+		Will work on them at later stage, as of now they contain dummy data
+	-->
+    <category>
+        <name>GroupSex</name>
+        <imagepath>Images/categories/groupsex.jpg</imagepath>
+        <stories>
+            <storyid>301</storyid>
+            <storyid>202</storyid>
+            <storyid>303</storyid>
+            <storyid>204</storyid>
+            <storyid>205</storyid>
+            <storyid>306</storyid>
+            <storyid>402</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Incest</name>
+        <imagepath>Images/categories/incest.jpg</imagepath>
+        <stories>
+        		<storyid>601</storyid>
+        		<storyid>602</storyid>
+        		<storyid>401</storyid>
+        		<storyid>403</storyid>
+            <storyid>201</storyid>
+            <storyid>302</storyid>
+            <storyid>203</storyid>
+            <storyid>304</storyid>
+            <storyid>205</storyid>
+            <storyid>306</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Lesbian</name>
+        <imagepath>Images/categories/lesbian.jpg</imagepath>
+        <stories>
+            <storyid>301</storyid>
+            <storyid>202</storyid>
+            <storyid>203</storyid>
+            <storyid>204</storyid>
+            <storyid>305</storyid>
+            <storyid>206</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Mom</name>
+        <imagepath>Images/categories/mom.jpg</imagepath>
+        <stories>
+            <storyid>301</storyid>
+            <storyid>202</storyid>
+            <storyid>303</storyid>
+            <storyid>304</storyid>
+            <storyid>305</storyid>
+            <storyid>206</storyid>
+        </stories>
+    </category>
+
+    <category>
+        <name>Neighbours</name>
+        <imagepath>Images/categories/neighbours.jpg</imagepath>
+        <stories>
+            <storyid>201</storyid>
+            <storyid>302</storyid>
+            <storyid>203</storyid>
+            <storyid>304</storyid>
+            <storyid>205</storyid>
+            <storyid>306</storyid>
+        </stories>
+    </category>
+    
+    <category>
+        <name>Stranger</name>
+        <stories>
+        		<storyid>501</storyid>
+        		<storyid>502</storyid>
+            <storyid>301</storyid>
+            <storyid>302</storyid>
+            <storyid>303</storyid>
+            <storyid>304</storyid>
+            <storyid>305</storyid>
+            <storyid>306</storyid>
+        </stories>
+    </category>        
+
+</categories>
+

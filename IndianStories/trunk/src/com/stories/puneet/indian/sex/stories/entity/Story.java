@@ -2,6 +2,7 @@ package com.stories.puneet.indian.sex.stories.entity;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
 
 import com.stories.puneet.indian.sex.stories.details.Log;
@@ -25,6 +26,7 @@ public class Story implements Serializable{
 	String mImageUrl;
 	List<String> mTags;
 	List<Categories> mCategories;
+	HashMap<String, String> ExtraParams= new HashMap<String, String>();
 	
 	public Story(String title){
 		this.mTitle = title;
@@ -93,6 +95,24 @@ public class Story implements Serializable{
 	public void setPath(String mPath) {
 		this.mPath = mPath;
 	}
+	
+	public String getExtraParam(String Key, String DefaultParam) {
+		String param = ExtraParams.get(Key);
+		if (param==null || param.trim().equals("")){
+			return DefaultParam;
+		}
+		return param;
+	}
+	
+	public void setExtraParam(String Key, String Value){
+		if (Value==null){
+			Log.dbg("Value is not available. Not storing the value.. ");
+			return;
+			}
+		Log.dbg("Adding Param "+Key+" in Story "+mStoryID+" with value = "+Value);
+		ExtraParams.put(Key, Value);
+	}
+	
 	
 	@Override
 	public String toString() {

@@ -6,7 +6,9 @@ http://www.humandigest.com/blog/
     <category>
         <name>Bhabhi</name>
         <imagepath>Images/categories/bhabhi.jpg</imagepath>
-        <stories>            
+        <stories>
+        		<storyid>401</storyid>
+        		<storyid>402</storyid>            
             <storyid>101</storyid>
             <storyid>201</storyid>
             <storyid>202</storyid>
@@ -14,6 +16,7 @@ http://www.humandigest.com/blog/
             <storyid>204</storyid>
             <storyid>205</storyid>
             <storyid>206</storyid>
+            
         </stories>
     </category>
     
@@ -47,6 +50,7 @@ http://www.humandigest.com/blog/
             <storyid>204</storyid>
             <storyid>205</storyid>
             <storyid>306</storyid>
+            <storyid>402</storyid>
         </stories>
     </category>
 
@@ -54,6 +58,10 @@ http://www.humandigest.com/blog/
         <name>Incest</name>
         <imagepath>Images/categories/incest.jpg</imagepath>
         <stories>
+        		<storyid>601</storyid>
+        		<storyid>602</storyid>
+        		<storyid>401</storyid>
+        		<storyid>403</storyid>
             <storyid>201</storyid>
             <storyid>302</storyid>
             <storyid>203</storyid>
@@ -105,6 +113,8 @@ http://www.humandigest.com/blog/
     <category>
         <name>Stranger</name>
         <stories>
+        		<storyid>501</storyid>
+        		<storyid>502</storyid>
             <storyid>301</storyid>
             <storyid>302</storyid>
             <storyid>303</storyid>

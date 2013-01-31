@@ -5,18 +5,19 @@
  */
 package com.stories.puneet.indian.sex.stories;
 
-import java.io.InputStream;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.stories.puneet.indian.sex.stories.details.Constants;
 import com.stories.puneet.indian.sex.stories.details.Log;
 import com.stories.puneet.indian.sex.stories.entity.Story;
-import com.stories.puneet.indian.sex.stories.helper.DummyData;
+import com.stories.puneet.indian.sex.stories.helper.Config;
 import com.stories.puneet.indian.sex.stories.helper.StoryHelper;
 import com.stories.puneet.indian.sex.stories.interfaces.storyfetching;
-
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
+import com.stories.puneet.indian.sex.stories.youtube.OpenYouTubePlayerActivity;
 
 /**
  * @author puneetb
@@ -58,11 +59,19 @@ public class StoryRedingActivity extends BaseActivity{
 		}
 		
 	}
+	
+	public void YouTubeVideoPlay(View v){
+		String VideoId = mCurrentStory.getExtraParam(Constants.STORY_YOUTUBE_ID,null);
+		Log.dbg("Video Playback button clicked. This will now play video "+VideoId);
+		
+		YouTubeActivity.LaunchYouTube(this, VideoId);
+	}
 
 	public void inilizaizeVariables() {
 		setTitle(R.string.app_name);
 		mTitle = (TextView) findViewById(R.id.storytitle);
 		mcompleteStory = (TextView) findViewById(R.id.completestory);
+		Config.getInstance().AdLeadBoltConfigured(this, Constants.LEADBOLT.INTERSTIAL_CHROME,Constants.LEADBOLT.INTERSTIAL_DELAY);
 	}
 
 	

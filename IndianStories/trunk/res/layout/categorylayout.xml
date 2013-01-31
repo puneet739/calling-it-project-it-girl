@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical" 
     >
-
+    <include layout="@layout/admoblayout" />
+    
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

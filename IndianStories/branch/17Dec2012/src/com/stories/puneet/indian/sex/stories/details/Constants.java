@@ -37,6 +37,8 @@ public class Constants {
 		public static final String APP_ICON="501285127";
 		public static final String APPWALL="956058664";
 		public static final String INTERSTIAL_CHROME = "252727620";
+		public static final long INTERSTIAL_DELAY = 4;
+		public static final long APPWALL_DELAY = 2;
 	}
 	
 }

@@ -10,9 +10,21 @@
 	<url>http://maven.apache.org</url>
 	<build>
 		<sourceDirectory>src/</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 	<scm>
+		<connection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/GenericBase/trunk</connection>
 		<developerConnection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/GenericBase/trunk</developerConnection>
+		<url>https://code.google.com/p/calling-it-project-it-girl/</url>
 	</scm>
 	<dependencies>
 		<dependency>

@@ -11,6 +11,9 @@
 	<build>
 		<sourceDirectory>src/</sourceDirectory>
 	</build>
+	<scm>
+		<developerConnection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/GenericBase/trunk</developerConnection>
+	</scm>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>

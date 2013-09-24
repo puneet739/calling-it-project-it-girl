@@ -1,43 +1,60 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/maven-v4_0_0.xsd">
-        <modelVersion>4.0.0</modelVersion>
-        <groupId>com.fairdeal.core</groupId>
-        <artifactId>fairdealcore</artifactId>
-        <packaging>jar</packaging>
-        <version>1.0-SNAPSHOT</version>
-        <name>FairDealCore</name>
-        <url>http://maven.apache.org</url>
-        <build>
-                <sourceDirectory>src/</sourceDirectory>
-                <plugins>
-                        <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-scm-plugin</artifactId>
-                                <version>1.8.1</version>
-                                <configuration>
-                                        <connectionType>developerConnection</connectionType>
-                                </configuration>
-                        </plugin>
-                </plugins>
-        </build>
-        <scm>
-                <connection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/FairDealCore/trunk</connection>
-                <developerConnection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/FairDealCore/trunk</developerConnection>
-                <url>https://code.google.com/p/calling-it-project-it-girl/</url>
-        </scm>
-        <dependencies>
-                <dependency>
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                        <version>4.9</version>
-                </dependency>
-                <dependency>
-                        <groupId>javax</groupId>
-                        <artifactId>javaee-api</artifactId>
-                        <version>6.0</version>
-                </dependency>
-        </dependencies>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.fairdeal.core</groupId>
+	<artifactId>fairdealcore</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>FairDealCore</name>
+	<url>http://maven.apache.org</url>
+
+	<build>
+		<sourceDirectory>src/</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<scm>
+		<connection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/FairDealCore/trunk</connection>
+		<developerConnection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/FairDealCore/trunk</developerConnection>
+		<url>https://code.google.com/p/calling-it-project-it-girl/</url>
+	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>com.fairdeal.basic</groupId>
+			<artifactId>genericbase</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>javax</groupId> -->
+		<!-- <artifactId>javaee-api</artifactId> -->
+		<!-- <version>6.0</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+		<!-- HiberNate core for hibernate related ORM stuff -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.2.5.Final</version>
+		</dependency>
+	</dependencies>
 
 </project>
 

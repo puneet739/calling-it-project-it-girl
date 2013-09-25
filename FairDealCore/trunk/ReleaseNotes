@@ -1,3 +1,5 @@
 This Will be creating the release notes and day to day update of the Work
 =============================================================
-24Sept2013
+1) I was constantly facing with "Absent Code attribute in method that is not native or abstract in class file javax/transaction/SystemException"
+for the same, i added the JTA dependency in pom.xml and the issue worked.
+2) 

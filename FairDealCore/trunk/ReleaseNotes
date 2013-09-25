@@ -1,5 +1,19 @@
 This Will be creating the release notes and day to day update of the Work
 =============================================================
 1) I was constantly facing with "Absent Code attribute in method that is not native or abstract in class file javax/transaction/SystemException"
-for the same, i added the JTA dependency in pom.xml and the issue worked.
-2) 
+Solution:: for the same, i added the JTA dependency in pom.xml and the issue worked.
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+2) Now facing the issue as "Absent Code attribute in method that is not native or abstract in class file javax/validation/Validation" 
+Solution:: Similar to above solution, i tried to find the default Java validation api details on mvn 
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+
+3) 

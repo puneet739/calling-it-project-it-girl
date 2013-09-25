@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
+	    <!-- Database Connection setting -->
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:MKYONG</property>
-		<property name="hibernate.connection.username">mkyong</property>
-		<property name="hibernate.connection.password">password</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+		<property name="hibernate.connection.username">fairdealadm</property>
+		<property name="hibernate.connection.password">Utiba99</property>
+		
+		<!--  Oracle dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-		<property name="hibernate.default_schema">MKYONG</property>
+		
+		<property name="hibernate.default_schema">fairdealadm</property>
 		<property name="show_sql">true</property>
-		<mapping resource="com/mkyong/user/DBUser.hbm.xml"></mapping>
+		<property name="hbm2ddl.auto">create-drop</property>
+		<property name="hibernate.archive.autodetection">true</property>
+		
+		
+		<!-- Configuring the DBEntities -->
+		<mapping class="com.fairdeal.core.entity.Agent"/>
 	</session-factory>
 </hibernate-configuration>

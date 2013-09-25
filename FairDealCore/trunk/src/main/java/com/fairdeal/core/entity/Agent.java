@@ -20,6 +20,8 @@ import javax.persistence.Table;
 @Table(name="AGENT")
 public class Agent implements Serializable{
 
+	private static final long serialVersionUID = -6294378258877811646L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	@Column(name="id", nullable=false)

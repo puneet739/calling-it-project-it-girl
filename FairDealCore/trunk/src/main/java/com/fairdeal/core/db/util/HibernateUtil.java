@@ -1,6 +1,7 @@
 package com.fairdeal.core.db.util;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
 import com.fairdeal.basic.log4j.Loger;
@@ -18,13 +19,14 @@ public class HibernateUtil {
 		SessionFactory factory = null;
 		try{
 			Configuration configuration = new Configuration();
-			configuration.configure();
+			configuration = configuration.configure();
 			factory = configuration.buildSessionFactory();
 		}catch(NullPointerException e){
-			Loger.app.error("Exception caused here",e);
+			Loger.app.error("Exception caused",e);
 		}
 		System.out.println("Session factory which will be returned is ::"+factory);
-		return factory;
+		sessionFactory = factory;
+		return sessionFactory;
 	}
 	
 	public static SessionFactory getSessionFactory(){

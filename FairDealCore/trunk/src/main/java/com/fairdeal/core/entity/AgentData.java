@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="agent_data")
+@Table(name="AGENT_DATA")
 public class AgentData {
 
 	@Column(name="agentid", nullable=false)

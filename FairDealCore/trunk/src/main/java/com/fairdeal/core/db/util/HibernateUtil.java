@@ -1,5 +1,6 @@
 package com.fairdeal.core.db.util;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
@@ -13,6 +14,16 @@ import com.fairdeal.basic.log4j.Loger;
  */
 public class HibernateUtil {
 
+	private static HibernateUtil mInstance;
+	private Session mSession;
+	
+	public static HibernateUtil getInstance(){
+		if (mInstance == null ){
+			mInstance = new HibernateUtil();
+		}
+		return mInstance;
+	}
+	
 	private static SessionFactory sessionFactory; 
 	
 	private static SessionFactory buildSessionFactory(){
@@ -29,12 +40,17 @@ public class HibernateUtil {
 		return sessionFactory;
 	}
 	
-	public static SessionFactory getSessionFactory(){
+	public SessionFactory getSessionFactory(){
 		if (sessionFactory==null) buildSessionFactory();
 		return sessionFactory;
 	}
 	
-	public static void shutdown() {
+	public Session getNewSession(){
+		Session currentSession= getSessionFactory().openSession();
+		return currentSession;
+	}
+	
+	public void shutdown() {
 		getSessionFactory().close();
 	}
 	

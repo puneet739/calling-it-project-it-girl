@@ -2,13 +2,20 @@ package com.fairdeal.core.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fairdeal.basic.log4j.Loger;
+import com.fairdeal.core.factory.AgentFactory;
 
 /**
  * Base entity Object for creating new Agent. 
@@ -36,8 +43,11 @@ public class Agent implements Serializable{
 	@Column(name="CreatedDate")
 	private Date createdDate;
 	
-	@Column(name="PhoneNumber")
+	@Column(name="PhoneNumber", unique=true)
 	private String phoneNumber;
+	
+	@ElementCollection
+	private Map<String,String> agentParams = new HashMap<String,String>();
 
 	
 	public int getId() {
@@ -78,6 +88,34 @@ public class Agent implements Serializable{
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	/**
+	 * @return the agentParams
+	 */
+	public Map getAgentParams() {
+		return agentParams;
+	}
+
+	/**
+	 * @param agentParams the agentParams to set
+	 */
+	public void setAgentParams(Map agentParams) {
+		this.agentParams = agentParams;
+	}
+	
+	public String getAgentParam(String key) {
+		String value;
+		try{
+			value = agentParams.get(key);
+			if (value==null){
+				value = AgentFactory.getInstance().getAgentData(getId(), key);
+				agentParams.put(key, value);
+			}
+		}catch(NullPointerException ne){
+			Loger.app.error("NullPointer Exception caused",ne);
+		}
+		return null;
 	}
 	
 }

@@ -8,7 +8,7 @@ import com.fairdeal.core.entity.Agent;
 public class Start{
 	public static void main(String args[]){
 		System.out.println("Test Project");
-		Session session = HibernateUtil.getSessionFactory().openSession();
+		Session session = HibernateUtil.getInstance().getSessionFactory().openSession();
 		
 		session.beginTransaction();
 		

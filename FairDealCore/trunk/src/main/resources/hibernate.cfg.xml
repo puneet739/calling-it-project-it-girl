@@ -17,6 +17,9 @@
 		<property name="hbm2ddl.auto">create-drop</property>
 		<property name="hibernate.archive.autodetection">true</property>
 		
+		<!-- This is added to make sure Session are mapped to thread
+		http://stackoverflow.com/questions/7281045/why-do-i-get-org-hibernate-hibernateexception-no-currentsessioncontext-configur -->
+		<property name="hibernate.current_session_context_class">thread</property>
 		
 		<!-- Configuring the DBEntities -->
 		<mapping class="com.fairdeal.core.entity.Agent"/>

@@ -1,11 +1,12 @@
 package com.fairdeal.core.db.util;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
 import com.fairdeal.basic.log4j.Loger;
+import com.fairdeal.core.trans.UserTransaction;
 
 /**
  * This class will create basic Call for setting up the Utility for Hibernate
@@ -45,6 +46,18 @@ public class HibernateUtil {
 		return sessionFactory;
 	}
 	
+	public Session getCurrentSession(){
+		Session currentSession= null;
+		try{
+		currentSession = getSessionFactory().getCurrentSession();
+		}catch(HibernateException ex){
+			System.err.println("HibernateException caused");
+			ex.printStackTrace();
+			currentSession = getSessionFactory().openSession();
+		}
+		return currentSession;
+	}
+	
 	public Session getNewSession(){
 		Session currentSession= getSessionFactory().openSession();
 		return currentSession;
@@ -52,6 +65,11 @@ public class HibernateUtil {
 	
 	public void shutdown() {
 		getSessionFactory().close();
+	}
+	
+	public UserTransaction getUserTransaction (Session currentSession){
+		UserTransaction aTrans = new UserTransaction(currentSession);
+		return aTrans;
 	}
 	
 }

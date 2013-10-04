@@ -1,9 +1,9 @@
 package com.fairdeal.core.factory;
 
+import java.util.List;
 import java.util.Map;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
+import org.hibernate.Query;
 
 import com.fairdeal.basic.log4j.Loger;
 import com.fairdeal.core.entity.Agent;
@@ -18,6 +18,7 @@ public class AgentFactory {
 
 	private static AgentFactory mInstance = new AgentFactory(); 
 	
+	private final String tableName =Agent.class.getName(); 
 	/**
 	 * Providing the Single Instance of AgentFactory. 
 	 */
@@ -34,6 +35,7 @@ public class AgentFactory {
 			aTrans.getSession().save(agent);
 		}catch(Exception e){
 			aTrans.getTransaction().rollback();
+			e.printStackTrace();
 			return 0;
 		}
 		return agent.getId();
@@ -55,14 +57,40 @@ public class AgentFactory {
 		return agent;
 	}
 	
+	/**
+	 * This program is used to fetch the agent object from the database via EMail id. 
+	 * @param aTrans	The UserTransaction which will be having session and transaction
+	 * @param email		The Email, which we need to fetch
+	 * @return			The agent Object from the databse, Null if no agent is found
+	 */
 	public Agent getAgentbyEmail(UserTransaction aTrans, String email){	
-		return null;
+		Agent agent= null;
+		try{
+			Query query = aTrans.getSession().createQuery("from "+tableName+" where Email=:email" );
+			query.setString("email", email);
+			List<Agent> agents = query.list();
+			for(Agent temp_agent: agents){
+				agent=temp_agent;
+			}
+		}catch(NullPointerException ne){
+			Loger.app.error("NullPointer Exception casued here", ne);
+		}
+		return agent;
 	}
 	
-	public boolean removeAgent(UserTransaction aTrans, int id){	
+	public boolean removeAgent(UserTransaction aTrans, int agentId){	
+		Agent agent = (Agent) aTrans.getSession().get(Agent.class, agentId);
+		return removeAgent(aTrans,agent);
+	}
+	
+	public boolean removeAgent(UserTransaction aTrans, Agent agent){
+		if (agent!=null){
+			aTrans.getSession().delete(agent);
+			return true;
+		}
 		return false;
 	}
-	
+			
 	public String getAgentData(int id, String key){
 		//Here we need to create a transaction and close it before finishing this class. 
 		return null;
@@ -72,7 +100,7 @@ public class AgentFactory {
 		return null;
 	}
 	
-	public Map<String, String> getAgentDatamap(UserTransaction aTrans, int id){
+	public Map<String, String> getAgentDatamap(UserTransaction aTrans, int agentId){
 		return null;
 	}
 	

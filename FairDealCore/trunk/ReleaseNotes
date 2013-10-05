@@ -19,3 +19,4 @@ Solution:: Similar to above solution, i tried to find the default Java validatio
 3) Just got to know that every database interaction should be treated as Transaction, thats why hibernate also use everytihng as Transaction.  
 4) Need to develop the ConfigModule for this Project
 5) Update AgentEntity so that now to create AGENT_AGENTPARAMS table.
+6) Need to figure out wh @PrePersist(JPA) is not working with hibernate. 

@@ -3,7 +3,6 @@ package com.fairdeal.core.entity;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 import javax.persistence.Column;
@@ -12,7 +11,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.fairdeal.basic.log4j.Loger;
 import com.fairdeal.core.factory.AgentFactory;
@@ -24,7 +26,7 @@ import com.fairdeal.core.factory.AgentFactory;
  *
  */
 @Entity
-@Table(name="AGENT")
+@Table(name="agent")
 public class Agent implements Serializable{
 
 	private static final long serialVersionUID = -6294378258877811646L;
@@ -37,11 +39,17 @@ public class Agent implements Serializable{
 	@Column(name="Name")
 	private String name;
 	
-	@Column(name="Email")
+	@Column(name="Email", unique=true)
 	private String email;
 	
 	@Column(name="CreatedDate")
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdDate;
+	
+	@PrePersist
+	protected void onCreate() {
+		this.createdDate = new Date();
+	}
 	
 	@Column(name="PhoneNumber", unique=true)
 	private String phoneNumber;
@@ -177,6 +185,16 @@ public class Agent implements Serializable{
 		} else if (!phoneNumber.equals(other.phoneNumber))
 			return false;
 		return true;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Agent [id=" + id + ", name=" + name + ", email=" + email
+				+ ", createdDate=" + createdDate + ", phoneNumber="
+				+ phoneNumber + ", agentParams=" + agentParams + "]";
 	}
 	
 }

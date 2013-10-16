@@ -105,20 +105,6 @@ public class Agent implements Serializable{
 		this.phoneNumber = phoneNumber;
 	}
 
-//	/**
-//	 * @return the agentParams
-//	 */
-//	public Map getAgentParams() {
-//		return agentParams;
-//	}
-//
-//	/**
-//	 * @param agentParams the agentParams to set
-//	 */
-//	public void setAgentParams(Map agentParams) {
-//		this.agentParams = agentParams;
-//	}
-	
 	public String getAgentParam(String key) {
 		String value = null;
 		try{

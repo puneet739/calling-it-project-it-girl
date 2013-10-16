@@ -25,5 +25,6 @@
 		<!-- Configuring the DBEntities -->
 		<mapping class="com.fairdeal.core.entity.Agent"/>
 		<mapping class="com.fairdeal.core.entity.AgentData"/>
+		<mapping class="com.fairdeal.core.entity.AgentAuth"/>
 	</session-factory>
 </hibernate-configuration>

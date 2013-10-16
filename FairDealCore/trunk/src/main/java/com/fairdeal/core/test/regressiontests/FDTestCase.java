@@ -12,6 +12,7 @@ import org.junit.Before;
 
 import com.fairdeal.core.db.util.HibernateUtil;
 import com.fairdeal.core.entity.Agent;
+import com.fairdeal.core.entity.AgentAuth;
 import com.fairdeal.core.entity.AgentData;
 import com.fairdeal.core.trans.UserTransaction;
 
@@ -23,11 +24,13 @@ public class FDTestCase {
 	
 	public Session session;
 	
+	public FDTestUtil util = new FDTestUtil();
+	
 	@Before
 	public void setup() {
 		session = HibernateUtil.getInstance().getNewSession();
 		// Setting the names of Table which needs to be removed
-		String[] tableNames = {Agent.class.getName() };
+		String[] tableNames = {Agent.class.getName(), AgentAuth.class.getName() };
 		UserTransaction transaction = new UserTransaction(HibernateUtil.getInstance().getNewSession());
 		
 		deleteOrphanTables();
@@ -72,6 +75,20 @@ public class FDTestCase {
 	 */
 	public void setSession(Session session) {
 		this.session = session;
+	}
+
+	/**
+	 * @return the util
+	 */
+	public FDTestUtil getUtil() {
+		return util;
+	}
+
+	/**
+	 * @param util the util to set
+	 */
+	public void setUtil(FDTestUtil util) {
+		this.util = util;
 	}
 	
 }

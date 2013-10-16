@@ -1,12 +1,16 @@
 package com.fairdeal.core.factory;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import org.hibernate.Query;
+import org.hibernate.Session;
 
 import com.fairdeal.basic.log4j.Loger;
+import com.fairdeal.core.db.util.HibernateUtil;
 import com.fairdeal.core.entity.Agent;
+import com.fairdeal.core.entity.AgentData;
 import com.fairdeal.core.trans.UserTransaction;
 
 /**
@@ -33,6 +37,10 @@ public class AgentFactory {
 	public int addAgent(UserTransaction aTrans, Agent agent){	
 		try{
 			aTrans.getSession().save(agent);
+			Collection<AgentData> datas = agent.getAgentDatas().values();
+			for (AgentData data: datas ){
+				aTrans.getSession().saveOrUpdate(data);
+			}
 		}catch(Exception e){
 			aTrans.getTransaction().rollback();
 			e.printStackTrace();
@@ -91,13 +99,49 @@ public class AgentFactory {
 		return false;
 	}
 			
-	public String getAgentData(int id, String key){
-		//Here we need to create a transaction and close it before finishing this class. 
-		return null;
+	public boolean addAgentData(UserTransaction aTrans, int agentId, String key, String value){
+		
+		boolean result=false;
+		try {
+			Session session = aTrans.getSession();
+			Agent agent = getAgentbyId(aTrans, agentId);
+			agent.addAgentParam(key, value);
+			session.save(agent);
+			result=true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 	
-	public String getAgentData(UserTransaction aTrans, int id, String key){
-		return null;
+	public String getAgentData(int agentId, String key){
+		//Here we need to create a transaction and close it before finishing this class.
+		Session session = HibernateUtil.getInstance().getNewSession();
+		String value=null;
+		try{
+			UserTransaction aTrans = new UserTransaction(session);
+			value=  getAgentData(aTrans, agentId, key); 
+		}finally{
+			session.close();
+		}
+		return value;
+	}
+	
+	public String getAgentData(UserTransaction aTrans, int agentId, String key){
+		String value = null;
+		try{
+			Agent agent = getAgentbyId(aTrans, agentId);
+			value= agent.getAgentParam(key);
+			//Query query = aTrans.getSession().createQuery("from "+AgentData.class.getName()+" where ID=:idsss and key=:key" );
+			//query.setString("idsss", ""+agentId);
+			//query.setString("key", key);
+			//query.setMaxResults(1);
+			//List<AgentData> queryResult = query.list();
+			//value = queryResult.get(0).getValue();
+		}catch(NullPointerException e){
+			e.printStackTrace();
+		}
+		return value;
 	}
 	
 	public Map<String, String> getAgentDatamap(UserTransaction aTrans, int agentId){
@@ -107,5 +151,4 @@ public class AgentFactory {
 	public boolean updateAgent(UserTransaction aTrans, int agentId, Agent targetAgent){	
 		return false;
 	}
-	
 }

@@ -4,18 +4,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="AGNET_AUTH")
+@Table(name="AGENT_AUTH")
 public class AgentAuth {
 
-	private final String  SEQUENCE_NUMBER_GENERATOR="AGENT_AUTH_SEQUENCE"; 
-	
-	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator=SEQUENCE_NUMBER_GENERATOR)
-	@SequenceGenerator(name=SEQUENCE_NUMBER_GENERATOR, sequenceName=SEQUENCE_NUMBER_GENERATOR, allocationSize=1)
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	@Column(name="agent_id")
@@ -82,7 +80,4 @@ public class AgentAuth {
 	public void setEncrypted_pin(String encrypted_pin) {
 		this.encrypted_pin = encrypted_pin;
 	}
-	
-	
-	
 }

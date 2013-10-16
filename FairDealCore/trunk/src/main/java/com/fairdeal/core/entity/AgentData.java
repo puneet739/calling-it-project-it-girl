@@ -1,35 +1,37 @@
 package com.fairdeal.core.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="AGENT_DATA")
-public class AgentData {
+@Table(name = "agent_data")
+public class AgentData implements Serializable {
 
-	@Column(name="agentid", nullable=false)
-	private int agentId;
-	
-	@Column(name="key")
+	private static final long serialVersionUID = -9220050940022338933L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@Column(name="agent_data_id")
+	private int aid;
+
+	@Column(name = "key")
 	private String key;
-	
-	@Column(name="value")
+
+	@Column(name = "value")
 	private String value;
 
-	/**
-	 * @return the agentId
-	 */
-	public int getAgentId() {
-		return agentId;
-	}
-
-	/**
-	 * @param agentId the agentId to set
-	 */
-	public void setAgentId(int agentId) {
-		this.agentId = agentId;
-	}
+	@ManyToOne
+	@JoinColumn(name="id")
+	private Agent agent;
+	
 
 	/**
 	 * @return the key
@@ -39,7 +41,8 @@ public class AgentData {
 	}
 
 	/**
-	 * @param key the key to set
+	 * @param key
+	 *            the key to set
 	 */
 	public void setKey(String key) {
 		this.key = key;
@@ -53,10 +56,25 @@ public class AgentData {
 	}
 
 	/**
-	 * @param value the value to set
+	 * @param value
+	 *            the value to set
 	 */
 	public void setValue(String value) {
 		this.value = value;
 	}
-	
+
+	/**
+	 * @return the agent
+	 */
+	public Agent getAgent() {
+		return agent;
+	}
+
+	/**
+	 * @param agent the agent to set
+	 */
+	public void setAgent(Agent agent) {
+		this.agent = agent;
+	}
+
 }

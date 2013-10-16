@@ -6,15 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MapKey;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Version;
 
 import com.fairdeal.basic.log4j.Loger;
 import com.fairdeal.core.factory.AgentFactory;
@@ -51,13 +53,18 @@ public class Agent implements Serializable{
 		this.createdDate = new Date();
 	}
 	
+	@Version
+	private int version;
+	
 	@Column(name="PhoneNumber", unique=true)
 	private String phoneNumber;
-	
-	@ElementCollection
-	private Map<String,String> agentParams = new HashMap<String,String>();
 
+	@OneToMany(mappedBy="agent", cascade={javax.persistence.CascadeType.ALL})
+	@MapKey(name="key")
+	private Map<String, AgentData> agentDatas = new HashMap<>();
 	
+	//private Map<String, String> agentParams = new HashMap<>();
+
 	public int getId() {
 		return id;
 	}
@@ -98,32 +105,41 @@ public class Agent implements Serializable{
 		this.phoneNumber = phoneNumber;
 	}
 
-	/**
-	 * @return the agentParams
-	 */
-	public Map getAgentParams() {
-		return agentParams;
-	}
-
-	/**
-	 * @param agentParams the agentParams to set
-	 */
-	public void setAgentParams(Map agentParams) {
-		this.agentParams = agentParams;
-	}
+//	/**
+//	 * @return the agentParams
+//	 */
+//	public Map getAgentParams() {
+//		return agentParams;
+//	}
+//
+//	/**
+//	 * @param agentParams the agentParams to set
+//	 */
+//	public void setAgentParams(Map agentParams) {
+//		this.agentParams = agentParams;
+//	}
 	
 	public String getAgentParam(String key) {
-		String value;
+		String value = null;
 		try{
-			value = agentParams.get(key);
+			value = agentDatas.get(key).getValue();
 			if (value==null){
 				value = AgentFactory.getInstance().getAgentData(getId(), key);
-				agentParams.put(key, value);
+				//agentDatas.get(key).getValue();
 			}
 		}catch(NullPointerException ne){
 			Loger.app.error("NullPointer Exception caused",ne);
 		}
-		return null;
+		return value;
+	}
+	
+	public void addAgentParam(String key, String value){
+		Loger.app.debug("test message");
+		AgentData data = new AgentData();
+		data.setKey(key);
+		data.setAgent(this);
+		data.setValue(value);
+		agentDatas.put(key, data);
 	}
 
 	/* (non-Javadoc)
@@ -133,8 +149,6 @@ public class Agent implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((agentParams == null) ? 0 : agentParams.hashCode());
 		result = prime * result
 				+ ((createdDate == null) ? 0 : createdDate.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
@@ -157,11 +171,6 @@ public class Agent implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Agent other = (Agent) obj;
-		if (agentParams == null) {
-			if (other.agentParams != null)
-				return false;
-		} else if (!agentParams.equals(other.agentParams))
-			return false;
 		if (createdDate == null) {
 			if (other.createdDate != null)
 				return false;
@@ -194,7 +203,21 @@ public class Agent implements Serializable{
 	public String toString() {
 		return "Agent [id=" + id + ", name=" + name + ", email=" + email
 				+ ", createdDate=" + createdDate + ", phoneNumber="
-				+ phoneNumber + ", agentParams=" + agentParams + "]";
+				+ phoneNumber + "]";
+	}
+
+	/**
+	 * @return the agentDatas
+	 */
+	public Map<String, AgentData> getAgentDatas() {
+		return agentDatas;
+	}
+
+	/**
+	 * @param agentDatas the agentDatas to set
+	 */
+	public void setAgentDatas(Map<String, AgentData> agentDatas) {
+		this.agentDatas = agentDatas;
 	}
 	
 }

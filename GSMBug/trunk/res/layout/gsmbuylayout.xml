@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/woodbackground"
+    android:orientation="vertical"
+    android:tileMode="repeat" >
+
+    <TextView
+        android:id="@+id/androidTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:shadowColor="@color/shadowColor"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="How can this be title"
+        android:textSize="@dimen/titlefont" />
+
+    <Button 
+        android:id="@+id/androidStartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="StartService" />
+
+    <Button
+        android:id="@+id/androidStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="StopService" />
+    
+        <TextView
+        android:id="@+id/androidTextView22"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:shadowColor="@color/shadowColor"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="This i s   "
+        android:textSize="@dimen/titlefont" />
+
+</LinearLayout>

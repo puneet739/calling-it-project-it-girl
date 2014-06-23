@@ -13,5 +13,4 @@ public class GSMBug extends Activity {
         text.setText("Hello World, Android - mkyong.com");
         setContentView(text);
     }
-
 }

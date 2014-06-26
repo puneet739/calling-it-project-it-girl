@@ -1,5 +1,7 @@
 package com.fairdeal.android.gsmbug;
 
+import com.fairdeal.android.gsmbug.R;
+
 import android.app.Activity;
 import android.media.MediaRecorder;
 import android.os.Bundle;
@@ -19,8 +21,7 @@ public class GSMBug extends Activity {
 		//loadRecorder();
 	}
 	
-	   private MediaRecorder myAudioRecorder;
-
+	private MediaRecorder myAudioRecorder;
 
 	private void loadRecorder() {
 		myAudioRecorder = new MediaRecorder();
@@ -32,11 +33,25 @@ public class GSMBug extends Activity {
 	}
 
 	private void initializeValue() {
-		Button button = (Button)findViewById(R.id.androidStartButton);
-		button.setOnClickListener(new OnClickListener() {
+		Button startButton = (Button)findViewById(R.id.androidStartButton);
+		startButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				System.out.println("Some service started");
+				Intent serviceIntent = new Intent();
+				serviceIntent.setAction("com.fairdeal.android.gsmbug.RecorderService");
+				startService(serviceIntent)
+				System.out.println("RecorderService started");
+			}
+		});
+		
+		Button stopButton = (Button)findViewById(R.id.androidStopButton);
+		stopButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent serviceIntent = new Intent();
+				serviceIntent.setAction("com.fairdeal.android.gsmbug.RecorderService");
+				stopService(serviceIntent)
+				System.out.println("RecorderService Stoped");
 			}
 		});
 	}

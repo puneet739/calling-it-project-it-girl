@@ -19,9 +19,9 @@ public class RecorderService extends Service {
 	}
 	
 	@Override
-	public int onStartCommand(Intent intent, int startId) {
+	public void onStart(Intent intent, int startId) {
+		// TODO Auto-generated method stub
 		super.onStart(intent, startId);
 	}
-	
 	
 }

@@ -3,6 +3,7 @@ package com.fairdeal.android.gsmbug;
 import com.fairdeal.android.gsmbug.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +40,7 @@ public class GSMBug extends Activity {
 			public void onClick(View v) {
 				Intent serviceIntent = new Intent();
 				serviceIntent.setAction("com.fairdeal.android.gsmbug.RecorderService");
-				startService(serviceIntent)
+				startService(serviceIntent);
 				System.out.println("RecorderService started");
 			}
 		});
@@ -50,7 +51,7 @@ public class GSMBug extends Activity {
 			public void onClick(View v) {
 				Intent serviceIntent = new Intent();
 				serviceIntent.setAction("com.fairdeal.android.gsmbug.RecorderService");
-				stopService(serviceIntent)
+				stopService(serviceIntent);
 				System.out.println("RecorderService Stoped");
 			}
 		});

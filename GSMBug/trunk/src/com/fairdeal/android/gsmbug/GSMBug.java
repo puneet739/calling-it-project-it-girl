@@ -1,6 +1,7 @@
 package com.fairdeal.android.gsmbug;
 
 import com.fairdeal.android.gsmbug.R;
+import com.fairdeal.android.gsmbug.util.LoggerUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -30,7 +31,7 @@ public class GSMBug extends Activity {
 				Intent serviceIntent = new Intent();
 				serviceIntent.setClass(getApplicationContext(), RecorderService.class);
 				startService(serviceIntent);
-				System.out.println("RecorderService started");
+				LoggerUtil.debug("RecorderService started");
 			}
 		});
 		
@@ -41,7 +42,7 @@ public class GSMBug extends Activity {
 				Intent serviceIntent = new Intent();
 				serviceIntent.setClass(getApplicationContext(), RecorderService.class);
 				stopService(serviceIntent);
-				System.out.println("RecorderService Stoped");
+				LoggerUtil.debug("RecorderService Stoped");
 			}
 		});
 	}

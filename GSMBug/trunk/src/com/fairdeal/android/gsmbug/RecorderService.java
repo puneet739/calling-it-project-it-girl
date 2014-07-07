@@ -2,6 +2,8 @@ package com.fairdeal.android.gsmbug;
 
 import java.io.IOException;
 
+import com.fairdeal.android.gsmbug.util.LoggerUtil;
+
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaRecorder;
@@ -75,7 +77,7 @@ public class RecorderService extends Service {
 				try {
 					Thread.sleep(3000);
 					int amplitude = params[0].getMaxAmplitude();
-					System.out.println("Calling to check the Executor : "+ amplitude);
+					LoggerUtil.debug("Calling to check the Executor : "+ amplitude);
 					if (amplitude>140){
 						String url = "tel:9971949200";
 					    Intent callingIntent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
@@ -85,15 +87,15 @@ public class RecorderService extends Service {
 					e.printStackTrace();
 				}
 			}
-			System.out
-					.println("Now finishing the task for recording the audio");
+			LoggerUtil.debug("Now finishing the task for recording the audio");
 			return null;
 		}
-
+		
 		public void stopBackgroundService() {
 			isRunning = false;
 		}
-
+		
+		@Override
 		public void onPreExecute() {
 			isRunning = true;
 		}

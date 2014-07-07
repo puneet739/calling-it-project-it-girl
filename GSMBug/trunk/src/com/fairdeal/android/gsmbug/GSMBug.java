@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class GSMBug extends Activity {
 
@@ -19,19 +18,9 @@ public class GSMBug extends Activity {
 
 		setContentView(R.layout.gsmbuylayout);
 		initializeValue();
-		//loadRecorder();
 	}
 	
 	private MediaRecorder myAudioRecorder;
-
-	private void loadRecorder() {
-		myAudioRecorder = new MediaRecorder();
-		myAudioRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-		myAudioRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-		myAudioRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-		myAudioRecorder.setOutputFile("testFile.3gp");
-		myAudioRecorder.start();
-	}
 
 	private void initializeValue() {
 		Button startButton = (Button)findViewById(R.id.androidStartButton);
@@ -39,7 +28,7 @@ public class GSMBug extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent serviceIntent = new Intent();
-				serviceIntent.setAction("com.fairdeal.android.gsmbug.RecorderService");
+				serviceIntent.setClass(getApplicationContext(), RecorderService.class);
 				startService(serviceIntent);
 				System.out.println("RecorderService started");
 			}
@@ -50,7 +39,7 @@ public class GSMBug extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent serviceIntent = new Intent();
-				serviceIntent.setAction("com.fairdeal.android.gsmbug.RecorderService");
+				serviceIntent.setClass(getApplicationContext(), RecorderService.class);
 				stopService(serviceIntent);
 				System.out.println("RecorderService Stoped");
 			}

@@ -14,7 +14,7 @@ import android.os.IBinder;
 
 public class RecorderService extends Service {
 
-	MediaRecorder player;
+	MediaRecorder recorder;
 
 	checkRecorder checker;
 
@@ -30,16 +30,16 @@ public class RecorderService extends Service {
 					.getAbsolutePath();
 			mFileName += "/test.mp4";
 
-			player = new MediaRecorder();
-			player.setAudioSource(MediaRecorder.AudioSource.MIC);
-			player.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-			player.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
-			player.setOutputFile(mFileName);
-			player.prepare();
-			player.start();
+			recorder = new MediaRecorder();
+			recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+			recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+			recorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
+			recorder.setOutputFile(mFileName);
+			recorder.prepare();
+			recorder.start();
 			if (checker == null)
 				checker = new checkRecorder();
-			checker.execute(player);
+			checker.execute(recorder);
 		} catch (IllegalStateException ex) {
 			ex.printStackTrace();
 		} catch (IOException e) {
@@ -55,9 +55,9 @@ public class RecorderService extends Service {
 	}
 
 	private void stopRecorder() {
-		if (player != null) {
-			player.stop();
-			player.release();
+		if (recorder != null) {
+			recorder.stop();
+			recorder.release();
 			checker.stopBackgroundService();
 		}
 	}

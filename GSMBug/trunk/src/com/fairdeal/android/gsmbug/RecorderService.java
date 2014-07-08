@@ -79,9 +79,13 @@ public class RecorderService extends Service {
 					int amplitude = params[0].getMaxAmplitude();
 					LoggerUtil.debug("Calling to check the Executor : "+ amplitude);
 					if (amplitude>140){
-						String url = "tel:9971949200";
-					    Intent callingIntent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
-					    startService(callingIntent);
+						
+						String url = "9971949200";
+						LoggerUtil.debug("Now calling phone Number :: "+url+" with Amplitude as: "+amplitude);
+						Intent intent = new Intent(Intent.ACTION_CALL);
+						intent.setData(Uri.parse("tel:" + url));
+						intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						startActivity(intent);
 					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();

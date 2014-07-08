@@ -5,8 +5,6 @@ import com.fairdeal.android.gsmbug.util.LoggerUtil;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaRecorder;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,12 +26,7 @@ public class GSMBug extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent callingIntent = new Intent();
-				callingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				callingIntent.setFlags(Intent.FLAG_FROM_BACKGROUND);
-				startService(callingIntent);
 				Intent serviceIntent = new Intent();
-
 				serviceIntent.setClass(getApplicationContext(),RecorderService.class);
 				startService(serviceIntent);
 				LoggerUtil.debug("RecorderService started");

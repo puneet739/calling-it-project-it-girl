@@ -30,12 +30,12 @@ public class LoggerUtil {
 
 	public static void debug(String msg) {
 		set_classname();
-		android.util.Log.d(log_tag, "********** " + className + ": " + msg);
+		android.util.Log.d(log_tag, className + ": " + msg);
 	}
 
 	public static void warn(String msg) {
 		set_classname();
-		android.util.Log.w(log_tag, "********** " + className + ": " + msg);
+		android.util.Log.w(log_tag, className + ": " + msg);
 	}
 
 }

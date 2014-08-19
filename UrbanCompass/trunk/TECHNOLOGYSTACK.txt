@@ -1,0 +1,15 @@
+This file is used to explain you the Technology stack i Am using. 
+==================================================================
+
+1) Java as the main programming language. 
+2) Spring MVC
+3) JSP as my front end.
+4) Mongo DB as my DB. -->> We require No SQL database, So making this application scalable.
+	Also we have free MongoDB hosting at this one website. https://mongolab.com/plans/pricing/
+
+5) Google Maps. 
+6) Google Statistics.     -->> Used for Tracking.
+7) Tomcat Server. 
+8) Image hosting need to figure out in later stage. 
+ 
+

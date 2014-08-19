@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.fairdeal.compass</groupId>
+	<artifactId>fairdealcompass</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>FairdealCompass</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<spring.version>4.0.2.RELEASE</spring.version>
+		<spring.security.version>3.2.1.RELEASE</spring.security.version>
+		<kundera.version>2.11</kundera.version>
+	</properties>
+	<scm>
+		<connection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/UrbanCompass/trunk</connection>
+		<developerConnection>scm:svn:https://calling-it-project-it-girl.googlecode.com/svn/UrbanCompass/trunk</developerConnection>
+		<url>https://calling-it-project-it-girl.googlecode.com/svn/UrbanCompass/trunk/</url>
+	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>${artifactId}-${version}</finalName>
+	</build>
+</project>

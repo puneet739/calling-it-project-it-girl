@@ -1,0 +1,5 @@
+This file is used to make sure these things need to be done to this Project
+========================================================================
+
+1) Add Google Statistics for checking the usage of Application.
+2) Get a fancy Logo for this application. Simple and elegant. Only Rotating 3D.   

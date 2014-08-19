@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<!-- This Is the configuration for Logging into the application. Added by Puneetb -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- File Appender -->
+	<!-- This will add logging to files with current date format. Added by Puneetb -->
+	<appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="../log-urban/loging.log" />
+        <param name="DatePattern" value=".yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="BatchAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="../log-urban/loging.log" />
+        <param name="DatePattern" value=".yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c :%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CurrentconfigGenerator" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="../log-urban/currentConfig.log" />
+        <param name="DatePattern" value=".yyyyMMdd'T'HHmmss" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%m%n" />
+		</layout>
+	</appender>
+		
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com">
+		<level value="debug" />
+	</logger>
+
+	
+	<!-- Root Logger -->
+	<root>
+		<priority value="warn" />
+		<appender-ref ref="file" />
+		<appender-ref ref="console" />
+	</root>
+	
+</log4j:configuration>

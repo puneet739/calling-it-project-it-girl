@@ -11,4 +11,9 @@
 </body>
 
 <script type="text/javascript" src="js/fairdeal-maps.js"></script>
+
+<script>
+	var listing = ${listing};
+	drawMarkerList(listing);
+</script>
 </html>

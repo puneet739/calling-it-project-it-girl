@@ -1,7 +1,7 @@
 <div id="homepage-content">
     <div class="feature-slide feature-slide--people">
       <div class="feature-slide__content">
-        <div class="feature-slide__subtitle">Work with Urban Compass Agents to find</div>
+        <div class="feature-slide__subtitle">Work with Fair Deal Agents to find</div>
         <div class="feature-slide__title">A HOME YOU LOVE</div>
         
           <div class="feature-slide__omnibox">

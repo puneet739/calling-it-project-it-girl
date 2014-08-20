@@ -6,13 +6,13 @@
 
       <div id="logo">
         <div class="fancy">
-          <a href="/" class="logo_name"><img class="rotate" src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/logo.svg" alt="FairDeal"></a>
+          <a href=home class="logo_name"><img class="rotate" src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/logo.svg" alt="FairDeal"></a>
           <div class="logo_rotate">
             <a href="#"><img class="rotate" src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/logo_circle.svg" alt="FairDeal"></a>
           </div>
         </div>
         <div class="normal">
-          <a href="/"><img src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/nav/logo.svg" alt="FairDeal"></a>
+          <a href="home"><img src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/nav/logo.svg" alt="FairDeal"></a>
         </div>
       </div>
 
@@ -20,7 +20,7 @@
 
       <nav id="navigation"><ul>
   <li>
-    <a href="/search/?listingTypes=0">Rentals</a>
+    <a href="search?listingTypes=0">Rentals</a>
   </li>
 
   <li>

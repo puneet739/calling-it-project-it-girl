@@ -41,7 +41,10 @@
     </div>
 
     <div id="copyright">
-      © Urban Compass. All Rights Reserved. 2012-2014 · <a href="http://nytm.org/made-in-nyc" rel="nofollow" target="_blank">Made In NYC</a>
+      © FairDeal Properties. All Rights Reserved. 2014 · <a href="http://nytm.org/made-in-nyc" rel="nofollow" target="_blank">Made In India</a>
     </div>
   </div>
 </footer>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh-t_LBkS9dKDRPTkScNoHhYLLYVtsStU"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>

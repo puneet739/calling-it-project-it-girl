@@ -24,8 +24,8 @@ public class RootController extends BaseController{
 	}
 	
 	
-	@RequestMapping(value="/main")
-	public String testMain(){
+	@RequestMapping(value="/home")
+	public String mainPage(){
 		LoggerUtil.debug("This has reachessd the page RootController.firstPage()");
 		return "main";
 	}

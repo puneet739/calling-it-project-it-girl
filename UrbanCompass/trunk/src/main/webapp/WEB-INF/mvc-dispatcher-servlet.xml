@@ -19,9 +19,13 @@
 	<mvc:resources location="/resources/images/" mapping="/images/**" />
 	<mvc:resources location="/resources/js/" mapping="/js/**" />
 	
+	
+	<!-- This is to tell the applicaiton to work on Annotations. -->
 	<context:annotation-config />
+	<!-- This package and and subdirectory need to be scanned for applicaiton run -->
     <context:component-scan base-package="com.fairdeal" />
     
+    <!-- This is to make mvc related annotation work, like @controller and @requestMapping.  -->
     <mvc:annotation-driven/>
 	
 	<bean

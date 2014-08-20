@@ -55,6 +55,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 			<version>1.2.12</version>
 		</dependency>
 
+		<!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 		<!-- Testing dependency added  -->
 		<dependency>
 			<groupId>junit</groupId>

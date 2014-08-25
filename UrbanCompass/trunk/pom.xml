@@ -12,6 +12,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<spring.version>4.0.2.RELEASE</spring.version>
 		<spring.security.version>3.2.1.RELEASE</spring.security.version>
+		<spring.data.mongodb>1.5.2.RELEASE</spring.data.mongodb>
 		<kundera.version>2.11</kundera.version>
 	</properties>
 	<scm>
@@ -47,7 +48,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.2.0.RELEASE</version>
+			<version>${spring.data.mongodb}</version>
 		</dependency>
 
 		<!-- Log4j -->
@@ -63,7 +64,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<!-- Converting JSON to Objects and Object to JSON-->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
@@ -71,6 +72,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 			<version>1.9.5</version>
 		</dependency>
 		
+		<!-- Apache Common Configuration for the application-->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.10</version>
+		</dependency>
+
 		<!-- Testing dependency added  -->
 		<dependency>
 			<groupId>junit</groupId>

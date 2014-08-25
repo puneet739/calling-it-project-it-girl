@@ -29,6 +29,7 @@
          var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
+      draggable:true,			//This is used to make the Marker Draggable. Will be helpfull in adding the listing. 
       title: 'Puneet Market Area'
   });
          google.maps.event.addListener(marker, 'click', function() {
@@ -37,6 +38,7 @@
 
       }
 
+      
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>

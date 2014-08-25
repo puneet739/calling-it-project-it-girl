@@ -5,7 +5,7 @@
 <body>
 	<jsp:include page="header.jsp" />
 
-	<div id="map-canvas" style="height: 80%"></div>
+	<div id="map-canvas" style="height: 100%"></div>
 
 	<jsp:include page="footer.jsp" />
 </body>

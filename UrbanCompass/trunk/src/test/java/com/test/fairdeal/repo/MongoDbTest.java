@@ -39,6 +39,9 @@ public class MongoDbTest extends TestBase{
 		LoggerUtil.debug("Now droping the table");
 		template.dropCollection(Listing.class);
 	}
+	
+	
+	
 
 	@Override
 	public void setUp() {

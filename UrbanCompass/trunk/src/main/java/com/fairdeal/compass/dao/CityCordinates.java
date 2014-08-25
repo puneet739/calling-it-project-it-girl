@@ -46,6 +46,14 @@ public class CityCordinates {
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "CityCordinates [cityName=" + cityName + ", latitude="
+				+ latitude + ", longitude=" + longitude + "]";
+	}
     
     
 }

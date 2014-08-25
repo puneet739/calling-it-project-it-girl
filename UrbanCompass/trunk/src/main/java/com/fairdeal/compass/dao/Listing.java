@@ -2,6 +2,8 @@ package com.fairdeal.compass.dao;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+
 /**
  * This is the base listing class. It is used to display the details on Map. 
  * 
@@ -9,6 +11,7 @@ import java.util.Date;
  */
 public class Listing {
 
+	@Id
 	private String id;
 	private String city;
 	private String state;
@@ -161,6 +164,18 @@ public class Listing {
 	 */
 	public void setCordinates(CityCordinates cordinates) {
 		this.cordinates = cordinates;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Listing [id=" + id + ", city=" + city + ", state=" + state
+				+ ", country=" + country + ", createdDate=" + createdDate
+				+ ", expirtyDate=" + expirtyDate + ", cordinates=" + cordinates
+				+ ", description=" + description + ", ownerId=" + ownerId
+				+ ", price=" + price + "]";
 	}
 	
 }

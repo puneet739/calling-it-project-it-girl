@@ -16,6 +16,12 @@ http://www.springframework.org/schema/util"
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
 
+
+	<bean id="config" class="com.fairdeal.compass.util.Config">
+		<constructor-arg name="path" value="mainconfig.properties"/>
+	</bean>
+
+
 	<!-- Offers convenience methods and automatic mapping between MongoDB JSON 
 		documents and your domain classes. -->
 	<!-- Factory bean that creates the Mongo instance -->

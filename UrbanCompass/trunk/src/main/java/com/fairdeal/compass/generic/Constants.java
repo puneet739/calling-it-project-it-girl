@@ -17,6 +17,11 @@ public class Constants {
 		public static final String EXPIRY_DATE="expirtyDate";
 		public static final String CREATED_DATE = "createdDate";
 		public static final String LISTING_ID = "id";
+		
+		
+		public static final int LISTING_RENTAL = 1;
+		public static final int LISTING_PURCHASE = 2;
+		public static final int LISTING_DEALERS = 3;
 	}
 	
 }

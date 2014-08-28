@@ -24,19 +24,19 @@
   </li>
 
   <li>
-    <a href="/search/?listingTypes=2">Sales</a>
+    <a href="search/?listingTypes=2">Sales</a>
   </li>
 
   <li>
-    <a href="/agents/profiles/">Agents</a>
+    <a href="agents/profiles/">Agents</a>
   </li>
 
   <li>
-    <a href="/customers/listings">My Apartments</a>
+    <a href="customers/listings">My Apartments</a>
   </li>
 
   <li>
-    <a href="/neighborhood-guides/">Neighborhoods</a>
+    <a href="neighborhood-guides/">Neighborhoods</a>
   </li>
 
 

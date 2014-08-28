@@ -15,7 +15,7 @@
       <div class="feature-pill">
         <div class="feature-pill__content">
           <div class="feature-pill__image">
-            <img src="//urbancompass-image-index.s3.amazonaws.com/69042911365b128c5c7a42f8c9813c43904f41df.jpg">
+            <img src="images/main-broker.jpg">
           </div>
           <div class="feature-pill__title">
             An agent that works for you
@@ -35,7 +35,7 @@
       <div class="feature-pill">
         <div class="feature-pill__content">
           <div class="feature-pill__image">
-            <img src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/homepage-apartment-circle.png">
+            <img src="images/homepage-apartment-circle.png">
           </div>
           <div class="feature-pill__title">
             Thousands of up-to-date listings
@@ -48,7 +48,7 @@
       <div class="feature-pill">
         <div class="feature-pill__content">
           <div class="feature-pill__image">
-            <img src="//d382qe86mkdg2o.cloudfront.net/static/5991f44/img/homepage-phone-circle.png">
+            <img src="images/homepage-phone-circle.png">
           </div>
           <div class="feature-pill__title">
             A simple way to search

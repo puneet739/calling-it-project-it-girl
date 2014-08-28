@@ -21,6 +21,8 @@ http://www.springframework.org/schema/util"
 		<constructor-arg name="path" value="mainconfig.properties"/>
 	</bean>
 
+	<bean id="util" class = "com.fairdeal.compass.util.Util"/>
+
 
 	<!-- Offers convenience methods and automatic mapping between MongoDB JSON 
 		documents and your domain classes. -->
@@ -35,6 +37,7 @@ http://www.springframework.org/schema/util"
 		<constructor-arg name="mongo" ref="mongo" />
 		<constructor-arg name="databaseName" value="urban_estate" />
 	</bean>
+	
 
 </beans>
 

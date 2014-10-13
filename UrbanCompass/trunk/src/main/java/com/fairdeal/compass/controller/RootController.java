@@ -30,5 +30,11 @@ public class RootController extends BaseController{
 		return "main";
 	}
 	
+	@RequestMapping(value="/agents")
+	public String agentsPage(){
+		LoggerUtil.debug("Here we are fetching all the agent Details and displaying agent details");
+		return "agent";
+	}
+	
 	
 }

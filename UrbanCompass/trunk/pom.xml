@@ -71,7 +71,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.5</version>
 		</dependency>
-		
+
 		<!-- Apache Common Configuration for the application-->
 		<dependency>
 			<groupId>commons-configuration</groupId>
@@ -87,6 +87,16 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		</dependency>
 	</dependencies>
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+		</plugins>
 		<finalName>${artifactId}-${version}</finalName>
 	</build>
 </project>
